@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>QCS</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/slick.css" rel="stylesheet" />
+    <link href="./css/slick-theme.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <!-- JS -->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="qcs-header">
+        <div class="container">
+          <div class="qcs-header-box">
+            <a href="/book" class="qcs-header-book">Service Appointment<img src="./img/icon/icon-right-2.svg"/></a>
+            <div class="qcs-header-box-logo"><a href="./"><img src="./img/logo.png" /></a></div>
+            <div class="qcs-header-box-lang">
+              <div class="qcs-header-box-sigin qcs-hide">
+                <button type="button" class="qcs-header-signin" onclick="openSignin()">Sign in</button>
+                <button type="button" class="qcs-header-signup" onclick="openSignup()">Sign up</button>
+              </div>
+              <div class="nav-box-list-menu dropdown">
+                  <button type="button" class="dropdown-toggle" id="list_menu_desktop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="./img/home/personal.svg" alt="Alexandre Paiva" class="qcs-img-personal">
+                      <div class="name">Alexandre Paiva</div>
+                  </button>
+                  <div class="dropdown-menu qcs-dropdown-menu" aria-labelledby="list_menu_desktop">
+                    <div class="menu-list-in-profile">
+                      <div class="list">
+                          <a href="./profile.html" onclick="setProfile('menu_personal')"><span>Personal Information</span></a>
+                      </div>
+                      <div class="list">
+                          <a href="./profile.html" onclick="setProfile('menu_setting')"><span>Setting Password</span></a>
+                      </div>
+                      <div class="list">
+                          <a href="./profile.html" onclick="setProfile('menu_history')"><span>History</span></a>
+                      </div>
+                      <div class="list">
+                          <a href="#"><span>Sign out</span></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <a href="#" class="qcs-header-lang">TH</a>
+              <a href="#" class="qcs-header-lang active">EN</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg qsc-nav">
+        <div class="container">
+          <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./about-us.html">About us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="menu_service" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Our service</a>
+                <div class="dropdown-menu" aria-labelledby="menu_service">
+                  <a class="dropdown-item" href="./condition.html">Check the car condition</a>
+                  <a class="dropdown-item" href="./maintenance.html">Maintenance</a>
+                  <a class="dropdown-item" href="./decorate.html">Decorate</a>
+                  <a class="dropdown-item" href="./onsite.html">Onsite service</a>
+                </div>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="./car.html">Used Car</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./promotion.html">Promotion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact-us.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section id="page_car">
+      <div class="container">
+        <h1 class="text-center">Find new cars and second hand cars</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-12 col-xl-9">
+            <div class="row car-row-filter">
+              <div class="col-12 col-md-3 col-xl-3">
+                <select class="qcs-selectize w-100" id="brand" name="brand" data-placeholder="Select Brand">
+                  <option value="" selected="selected">Select Brand</option>
+                  <option value="1">Brand 1</option>
+                  <option value="2">Brand 2</option>
+                  <option value="3">Brand 3</option>
+                  <option value="4">Brand 4</option>
+                  <option value="5">Brand 5</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-3 col-xl-3">
+                <select class="qcs-selectize w-100" id="model" name="model" data-placeholder="Select Model">
+                  <option value="" selected="selected">Select Model</option>
+                  <option value="1">Model 1</option>
+                  <option value="2">Model 2</option>
+                  <option value="3">Model 3</option>
+                  <option value="4">Model 4</option>
+                  <option value="5">Model 5</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-3 col-xl-3">
+                <select class="qcs-selectize w-100" id="years" name="years" data-placeholder="Select Years">
+                  <option value="" selected="selected">Select Years</option>
+                  <option value="1">Years 1</option>
+                  <option value="2">Years 2</option>
+                  <option value="3">Years 3</option>
+                  <option value="4">Years 4</option>
+                  <option value="5">Years 5</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-3 col-xl-3">
+                <button type="button" class="qcs-button">Search now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-xl-10 offset-xl-1">
+            <div class="row align-items-center">
+              <div class="col-6 col-md-6 col-xl-6">
+                <span id="count_total_cal">4</span>
+                <span id="name_car">Prosche</span>
+                <span>available</span>
+              </div>
+              <div class="col-6 col-md-6 col-xl-6">
+                <div class="car-sort-by">
+                  <span>Sort by</span>
+                  <select class="qcs-selectize car-select-sort-by" id="sort_by">
+                    <option value="1">Price</option>
+                    <option value="2">Sort 2</option>
+                    <option value="3">Sort 3</option>
+                    <option value="4">Sort 4</option>
+                    <option value="5">Sort 5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Items -->
+        <div class="row">
+          <div class="col-12 col-md-12 col-xl-10 offset-xl-1" id="car_items">
+            <div class="car-card-row">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-6 col-xl-6"><img src="./img/car/image-1.png"></div>
+                <div class="col-12 col-md-6 col-xl-6">
+                  <div class="car-card-box-detail">
+                    <div class="car-card-detail">
+                      <img src="./img/car/logo.svg">
+                      <div class="car-card-title">
+                        <p class="name">911 Turbo S Exclusive Series</p>
+                        <div class="box-info">
+                          <span>โฉม : </span>
+                          <span class="car-model">2014 - 2018</span>
+                          <span>ปี : </span>
+                          <span class="car-years">2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="car-card-price">
+                      <span>33,900,000</span>
+                      <span>THB</span>
+                    </div>
+                    <div class="car-card-link">
+                      <a href="./car-detail.html" class="btn-home-more">View more<img src="./img/icon/icon-right-2-b.svg"></a>
+                      <a href="#" class="qcs-btn-share"><span>Share</span> <img src="./img/icon/icon-share.svg"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="car-card-row">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-6 col-xl-6"><img src="./img/car/image-2.png"></div>
+                <div class="col-12 col-md-6 col-xl-6">
+                  <div class="car-card-box-detail">
+                    <div class="car-card-detail">
+                      <img src="./img/car/logo.svg">
+                      <div class="car-card-title">
+                        <p class="name">911 Turbo S Exclusive Series</p>
+                        <div class="box-info">
+                          <span>โฉม : </span>
+                          <span class="car-model">2014 - 2018</span>
+                          <span>ปี : </span>
+                          <span class="car-years">2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="car-card-price">
+                      <span>33,900,000</span>
+                      <span>THB</span>
+                    </div>
+                    <div class="car-card-link">
+                      <a href="./car-detail.html" class="btn-home-more">View more<img src="./img/icon/icon-right-2-b.svg"></a>
+                      <a href="#" class="qcs-btn-share"><span>Share</span> <img src="./img/icon/icon-share.svg"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="car-card-row">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-6 col-xl-6"><img src="./img/car/image-3.png"></div>
+                <div class="col-12 col-md-6 col-xl-6">
+                  <div class="car-card-box-detail">
+                    <div class="car-card-detail">
+                      <img src="./img/car/logo.svg">
+                      <div class="car-card-title">
+                        <p class="name">911 Turbo S Exclusive Series</p>
+                        <div class="box-info">
+                          <span>โฉม : </span>
+                          <span class="car-model">2014 - 2018</span>
+                          <span>ปี : </span>
+                          <span class="car-years">2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="car-card-price">
+                      <span>33,900,000</span>
+                      <span>THB</span>
+                    </div>
+                    <div class="car-card-link">
+                      <a href="./car-detail.html" class="btn-home-more">View more<img src="./img/icon/icon-right-2-b.svg"></a>
+                      <a href="#" class="qcs-btn-share"><span>Share</span> <img src="./img/icon/icon-share.svg"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="car-card-row">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-6 col-xl-6"><img src="./img/car/image-4.png"></div>
+                <div class="col-12 col-md-6 col-xl-6">
+                  <div class="car-card-box-detail">
+                    <div class="car-card-detail">
+                      <img src="./img/car/logo.svg">
+                      <div class="car-card-title">
+                        <p class="name">911 Turbo S Exclusive Series</p>
+                        <div class="box-info">
+                          <span>โฉม : </span>
+                          <span class="car-model">2014 - 2018</span>
+                          <span>ปี : </span>
+                          <span class="car-years">2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="car-card-price">
+                      <span>33,900,000</span>
+                      <span>THB</span>
+                    </div>
+                    <div class="car-card-link">
+                      <a href="./car-detail.html" class="btn-home-more">View more<img src="./img/icon/icon-right-2-b.svg"></a>
+                      <a href="#" class="qcs-btn-share"><span>Share</span> <img src="./img/icon/icon-share.svg"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="qcs-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-4 col-md-2 col-xl-2">
+              <ul class="list-unstyled qcs-footer-link">
+                <li><a href="./about-us.html">About us</a></li>
+                <li><a>Our service</a></li>
+                <li><a href="./condition.html" class="disable">Check the car condition</a></li>
+                <li><a href="./maintenance.html" class="disable">Maintenance</a></li>
+                <li><a href="./decorate.html" class="disable">Decorate</a></li>
+                <li><a href="./onsite.html" class="disable">Onsite service</a></li>
+              </ul>
+            </div>
+            <div class="col-4 col-md-2 col-xl-2">
+              <ul class="list-unstyled qcs-footer-link">
+                <li><a href="./car.html" class="active">Used Car</a></li>
+                <li><a href="./promotion.html">Promotion</a></li>
+              </ul>
+            </div>
+            <div class="col-4 col-md-2 col-xl-3">
+              <ul class="list-unstyled qcs-footer-link">
+                <li><a href="./news.html">News</a></li>
+                <li><a href="./contact-us.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-xl-5">
+              <div class="qcs-footer-right">
+                <form class="form-subscribe">
+                  <input type="email" name="subscribe" id="subscribe" class="input-subscribe" placeholder="Enter your email">
+                  <button type="submit" class="btn-subscribe">SUBSCRIBE</button>
+                </form>
+                <div class="qcs-footer-connect">
+                  <p>Connect with QCS</p>
+                  <div class="footer-social">
+                    <a target="_blank" href="#"><img src="./img/icon/facebook.svg"></a>
+                    <a target="_blank" href="#"><img src="./img/icon/line.svg"></a>
+                    <a target="_blank" href="#"><img src="./img/icon/twitter.svg"></a>
+                    <a target="_blank" href="#"><img src="./img/icon/youtube.svg"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="qcs-copyright">
+        <div class="container">
+          <span>© 2019 QCS CO., LTD</span>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/js.js"></script>
+    <!-- Page car -->
+    <link href="./css/selectize.css" rel="stylesheet" />
+    <link href="./css/car.css" rel="stylesheet" />
+    <script type="text/javascript" src="./js/selectize.min.js"></script>
+    <script type="text/javascript" src="./js/car.js"></script>
+  </body>
+</html>

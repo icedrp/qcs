@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>QCS</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/slick.css" rel="stylesheet" />
+    <link href="./css/slick-theme.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <!-- JS -->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="qcs-header">
+        <div class="container">
+          <div class="qcs-header-box">
+            <a href="/book" class="qcs-header-book">Service Appointment<img src="./img/icon/icon-right-2.svg"/></a>
+            <div class="qcs-header-box-logo"><a href="./"><img src="./img/logo.png" /></a></div>
+            <div class="qcs-header-box-lang">
+              <div class="qcs-header-box-sigin">
+                <button type="button" class="qcs-header-signin" onclick="openSignin()">Sign in</button>
+                <button type="button" class="qcs-header-signup" onclick="openSignup()">Sign up</button>
+              </div>
+              <div class="nav-box-list-menu dropdown qcs-hide">
+                  <button type="button" class="dropdown-toggle" id="list_menu_desktop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="./img/home/personal.svg" alt="Alexandre Paiva" class="qcs-img-personal">
+                      <div class="name">Alexandre Paiva</div>
+                  </button>
+                  <div class="dropdown-menu qcs-dropdown-menu" aria-labelledby="list_menu_desktop">
+                    <div class="menu-list-in-profile">
+                      <div class="list">
+                          <a href="./profile.html" onclick="setProfile('menu_personal')"><span>Personal Information</span></a>
+                      </div>
+                      <div class="list">
+                          <a href="./profile.html" onclick="setProfile('menu_setting')"><span>Setting Password</span></a>
+                      </div>
+                      <div class="list">
+                          <a href="./profile.html" onclick="setProfile('menu_history')"><span>History</span></a>
+                      </div>
+                      <div class="list">
+                          <a href="#"><span>Sign out</span></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <a href="#" class="qcs-header-lang">TH</a>
+              <a href="#" class="qcs-header-lang active">EN</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg qsc-nav">
+        <div class="container">
+          <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./about-us.html">About us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="menu_service" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Our service</a>
+                <div class="dropdown-menu" aria-labelledby="menu_service">
+                  <a class="dropdown-item" href="./condition.html">Check the car condition</a>
+                  <a class="dropdown-item" href="./maintenance.html">Maintenance</a>
+                  <a class="dropdown-item" href="./decorate.html">Decorate</a>
+                  <a class="dropdown-item" href="./onsite.html">Onsite service</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./car.html">Used Car</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./promotion.html">Promotion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact-us.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- LOGIN & REGIS -->
+    <div class="qcs-popup">
+      <div class="qcs-popup-bg">
+        <!-- Header -->
+        <div class="qcs-popup-header">
+          <button type="button" class="btn-close-popup" onclick="closePopup()"><img src="./img/icon/icon-close.svg"></button>
+        </div>
+        <!-- Body -->
+        <div class="qcs-popup-body">
+          <h2 class="form-login">Sign in</h2>
+          <h2 class="form-regis">Sign up</h2>
+          <div class="sign-in-social">
+            <button type="button" class="btn-facebook"><img src="./img/icon/facebook-logo.svg"><span>Sign in with Facebook</span></button>
+            <button type="button" class="btn-google"><img src="./img/icon/google-logo.svg"><span>Sign in with Google</span></button>
+          </div>
+          <div class="qcs-popup-line"><span>or</span></div>
+          <!-- Login -->
+          <form class="form-login">
+            <div class="qcs-field" data-id="login_email">
+              <input type="email" name="login_email" id="login_email" class="qcs-popup-input" required="true" />
+              <label for="login_email"><span>Email Address</span></label>
+            </div>
+            <div class="qcs-field" data-id="login_password">
+              <input type="password" name="login_password" id="login_password" class="qcs-popup-input" required="true" />
+              <label for="login_password"><span>Password</span></label>
+            </div>
+            <a href="./forgot-password.html" class="qcs-forgot-password">Forgot Your Password ?</a>
+            <button type="submit" class="btn-confirm-popup">Sign in</button>
+            <p class="qcs-link-open">Don't have an account? <span onclick="openSignup()">Sign up</span></p>
+          </form>
+          <!-- Regis -->
+          <form class="form-regis">
+            <div class="qcs-field">
+              <input type="email" name="regis_email" id="regis_email" class="qcs-popup-input" required="true" />
+              <label for="regis_email"><span>Email Address</span></label>
+            </div>
+            <div class="qcs-field">
+              <input type="text" name="regis_name" id="regis_name" class="qcs-popup-input" required="true" />
+              <label for="regis_name"><span>First name</span></label>
+            </div>
+            <div class="qcs-field">
+              <input type="text" name="regis_lastname" id="regis_lastname" class="qcs-popup-input" required="true" />
+              <label for="regis_lastname"><span>Last name</span></label>
+            </div>
+            <div class="qcs-field">
+              <input type="password" name="regis_password" id="regis_password" class="qcs-popup-input" required="true" />
+              <label for="regis_password"><span>Password</span></label>
+            </div>
+            <button type="submit" class="btn-confirm-popup">Sign up</button>
+            <p class="qcs-link-open">Already have an account? <span onclick="openSignin()">Login</span></p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Content -->
+    <section id="home_slide">
+      <div class="qcs-slide">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <!-- <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          </ol> -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/slide/image-1.png" class="d-block w-100" alt="image 1">
+              <div class="carousel-caption">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12 col-md-12 col-xl-5 text-left">
+                      <h1>Service Appointment</h1>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget, ornare posuere nisl. Mauris pretium id ligula a tempor.</p>
+
+                      <a href="/book" class="qcs-slide-btn">Book now <img src="./img/icon/icon-right-2-b.svg"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="home_our_service">
+      <div class="container">
+        <h1 class="home-h1">Our service</h1>
+        <div class="row">
+          <div class="col-12 col-md-12 col-xl-12">
+            <div class="row home-our-service-row">
+              <div class="col-12 col-md-6 col-xl-6 home-our-service-p">
+                  <a href="#"><div class="crad-our-service">
+                    <div class="crad-our-service-img">
+                      <img src="./img/home/our-service/image-1.png">
+                    </div>
+                    <div class="crad-our-service-content">
+                      <img src="./img/icon/beeline.png">
+                      <div class="box-text">
+                        <div class="title">Check the car condition</div>
+                        <div class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget</div>
+                      </div>
+                    </div>
+                  </div></a>
+              </div>
+              <div class="col-12 col-md-6 col-xl-6 home-our-service-p">
+                <a href="#"><div class="crad-our-service">
+                  <div class="crad-our-service-img">
+                    <img src="./img/home/our-service/image-2.png">
+                  </div>
+                  <div class="crad-our-service-content">
+                    <img src="./img/icon/beeline.png">
+                    <div class="box-text">
+                      <div class="title">Maintenance</div>
+                      <div class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget</div>
+                    </div>
+                  </div>
+                </div></a>
+              </div>
+              <div class="col-12 col-md-4 col-xl-4 home-our-service-p">
+                  <a href="#"><div class="crad-our-service">
+                    <div class="crad-our-service-img">
+                      <img src="./img/home/our-service/image-3.png">
+                    </div>
+                    <div class="crad-our-service-content">
+                      <img src="./img/icon/beeline.png">
+                      <div class="box-text">
+                        <div class="title">Decorate</div>
+                        <div class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget</div>
+                      </div>
+                    </div>
+                  </div></a>
+              </div>
+              <div class="col-12 col-md-4 col-xl-4 home-our-service-p">
+                <a href="#"><div class="crad-our-service">
+                  <div class="crad-our-service-img">
+                    <img src="./img/home/our-service/image-4.png">
+                  </div>
+                  <div class="crad-our-service-content">
+                    <img src="./img/icon/beeline.png">
+                    <div class="box-text">
+                      <div class="title">Onsite service</div>
+                      <div class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget</div>
+                    </div>
+                  </div>
+                </div></a>
+              </div>
+              <div class="col-12 col-md-4 col-xl-4 home-our-service-p">
+                <a href="#"><div class="crad-our-service">
+                  <div class="crad-our-service-img">
+                    <img src="./img/home/our-service/image-5.png">
+                  </div>
+                  <div class="crad-our-service-content">
+                    <img src="./img/icon/beeline.png">
+                    <div class="box-text">
+                      <div class="title">Car Detailing</div>
+                      <div class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget</div>
+                    </div>
+                  </div>
+                </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="home_promotion_service">
+      <div class="container">
+        <h1 class="home-h1">Promotion Service</h1>
+        <div class="row">
+          <div class="col-12 col-md-4 col-xl-4">
+            <a href="#"><div class="crad-promotion-service">
+              <img src="./img/home/promotion-service/image-1.png" class="img-home-promotion-service">
+              <div class="home-promotion-service-content">
+                <div class="box-title">
+                  <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit.</p>
+                </div>
+                <div class="box-info">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget, sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget
+                </div>
+              </div>
+            </div></a>
+          </div>
+          <div class="col-12 col-md-4 col-xl-4">
+            <a href="#"><div class="crad-promotion-service">
+              <img src="./img/home/promotion-service/image-2.png" class="img-home-promotion-service">
+              <div class="home-promotion-service-content">
+                <div class="box-title">
+                  <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit.</p>
+                </div>
+                <div class="box-info">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget, sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget
+                </div>
+              </div>
+            </div></a>
+          </div>
+          <div class="col-12 col-md-4 col-xl-4">
+            <a href="#"><div class="crad-promotion-service">
+              <img src="./img/home/promotion-service/image-3.png" class="img-home-promotion-service">
+              <div class="home-promotion-service-content">
+                <div class="box-title">
+                  <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit.</p>
+                </div>
+                <div class="box-info">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget, sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget
+                </div>
+              </div>
+            </div></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-xl-12">
+            <div class="qcs-home-box-btn">
+              <a href="#" class="btn-home-more">Discover more<img src="./img/icon/icon-right-2-b.svg"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="home_our_news">
+      <div class="container">
+        <h1 class="home-h1">Our News</h1>
+        <div class="row">
+          <div class="col-12 col-md-6 col-xl-6">
+            <a href="#"><div class="crad-our-news">
+              <img src="./img/home/our-news/image-1.png" class="w-100">
+              <div class="home-our-news-content">
+                <div class="box-title">
+                  <div class="tag-news">new</div>
+                  <p>Niche Cars Group reveals McLaren 570S in Silica White</p>
+                </div>
+                <div class="box-date">24 Jan 2019</div>
+                <div class="box-info">
+                  Niche Cars Group, a sole authorized dealer of McLaren, led by President Seree Chinabarramee (2nd left), Managing Director Vittawat Chinabarramee...
+                </div>
+              </div>
+            </div></a>
+          </div>
+          <div class="col-12 col-md-6 col-xl-6">
+            <a href="#"><div class="crad-our-news">
+              <img src="./img/home/our-news/image-2.png" class="w-100">
+              <div class="home-our-news-content">
+                <div class="box-title">
+                  <p>Niche Cars Group นำ Lamborghini และ McLaren ร่วมงานมอเตอร์โชว์ 2559</p>
+                </div>
+                <div class="box-date">24 Jan 2019</div>
+                <div class="box-info">
+                  บริษัท นิช คาร์ กรุ๊ป จำกัด ผู้นำเข้ารถยนต์ระดับซุปเปอร์คาร์ สปอร์ตคาร์ และไฮเปอร์คาร์ อย่างเป็นทางการในประเทศไทย ส่งซุปเปอร์คาร์สุดหรูตัวท้อปร่วมอวดโฉม ...
+                </div>
+              </div>
+            </div></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-xl-12">
+            <div class="qcs-home-box-btn">
+              <a href="#" class="btn-home-more">Discover more<img src="./img/icon/icon-right-2-b.svg"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="home_car_recommend">
+      <div class="container">
+        <h1 class="home-h1">Car Recommend</h1>
+        <div class="row" id="car_recommend">
+          <div class="col-12 col-md-12 col-xl-12">
+            <a href="#"><div class="card-car-recommend">
+              <img src="./img/home/car/image-1.png" class="img-car-recommend">
+              <div class="home-car-content">
+                <div class="box-title">
+                  <div class="tag-news">new</div>
+                  <p>New Mini Cooper S</p>
+                </div>
+                <div class="box-info">
+                  <span>โฉม : </span><span class="car-model">2014 - 2018</span>
+                  <span>ปี : </span><span class="car-years">2017</span>
+                </div>
+              </div>
+              <div class="home-car-price">
+                <span class="text-car-price">7,000,000</span><span class="text-car-unit">THB</span>
+              </div>
+            </div></a>
+          </div>
+          <div class="col-12 col-md-12 col-xl-12">
+            <a href="#"><div class="card-car-recommend">
+              <img src="./img/home/car/image-2.png" class="img-car-recommend">
+              <div class="home-car-content">
+                <div class="box-title">
+                  <div class="tag-news">new</div>
+                  <p>Mclaren Mp4</p>
+                </div>
+                <div class="box-info">
+                  <span>โฉม : </span><span class="car-model">2014 - 2018</span>
+                  <span>ปี : </span><span class="car-years">2017</span>
+                </div>
+              </div>
+              <div class="home-car-price">
+                <span class="text-car-price">31,000,000</span><span class="text-car-unit">THB</span>
+              </div>
+            </div></a>
+          </div>
+          <div class="col-12 col-md-12 col-xl-12">
+            <a href="#"><div class="card-car-recommend">
+              <img src="./img/home/car/image-3.png" class="img-car-recommend">
+              <div class="home-car-content">
+                <div class="box-title">
+                  <p>Porsche 718 Boxster Racing Yellow</p>
+                </div>
+                <div class="box-info">
+                  <span>โฉม : </span><span class="car-model">2014 - 2018</span>
+                  <span>ปี : </span><span class="car-years">2017</span>
+                </div>
+              </div>
+              <div class="home-car-price">
+                <span class="text-car-price">40,000,000</span><span class="text-car-unit">THB</span>
+              </div>
+            </div></a>
+          </div>
+          <div class="col-12 col-md-12 col-xl-12">
+            <a href="#"><div class="card-car-recommend">
+              <img src="./img/home/car/image-2.png" class="img-car-recommend">
+              <div class="home-car-content">
+                <div class="box-title">
+                  <div class="tag-news">new</div>
+                  <p>Mclaren Mp4</p>
+                </div>
+                <div class="box-info">
+                  <span>โฉม : </span><span class="car-model">2014 - 2018</span>
+                  <span>ปี : </span><span class="car-years">2017</span>
+                </div>
+              </div>
+              <div class="home-car-price">
+                <span class="text-car-price">31,000,000</span><span class="text-car-unit">THB</span>
+              </div>
+            </div></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-xl-12">
+            <div class="qcs-home-box-btn">
+              <a href="#" class="btn-home-more">Discover more<img src="./img/icon/icon-right-2-b.svg"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="qcs-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-4 col-md-2 col-xl-2">
+              <ul class="list-unstyled qcs-footer-link">
+                <li><a href="./about-us.html">About us</a></li>
+                <li><a>Our service</a></li>
+                <li><a href="./condition.html" class="disable">Check the car condition</a></li>
+                <li><a href="./maintenance.html" class="disable">Maintenance</a></li>
+                <li><a href="./decorate.html" class="disable">Decorate</a></li>
+                <li><a href="./onsite.html" class="disable">Onsite service</a></li>
+              </ul>
+            </div>
+            <div class="col-4 col-md-2 col-xl-2">
+              <ul class="list-unstyled qcs-footer-link">
+                <li><a href="./car.html">Used Car</a></li>
+                <li><a href="./promotion.html">Promotion</a></li>
+              </ul>
+            </div>
+            <div class="col-4 col-md-2 col-xl-3">
+              <ul class="list-unstyled qcs-footer-link">
+                <li><a href="./news.html">News</a></li>
+                <li><a href="./contact-us.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-xl-5">
+              <div class="qcs-footer-right">
+                <form class="form-subscribe">
+                  <input type="email" name="subscribe" id="subscribe" class="input-subscribe" placeholder="Enter your email">
+                  <button type="submit" class="btn-subscribe">SUBSCRIBE</button>
+                </form>
+                <div class="qcs-footer-connect">
+                  <p>Connect with QCS</p>
+                  <div class="footer-social">
+                    <a target="_blank" href="#"><img src="./img/icon/facebook.svg"></a>
+                    <a target="_blank" href="#"><img src="./img/icon/line.svg"></a>
+                    <a target="_blank" href="#"><img src="./img/icon/twitter.svg"></a>
+                    <a target="_blank" href="#"><img src="./img/icon/youtube.svg"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="qcs-copyright">
+        <div class="container">
+          <span>© 2019 QCS CO., LTD</span>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/js.js"></script>
+  </body>
+</html>

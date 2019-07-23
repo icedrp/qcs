@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>QCS</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/slick.css" rel="stylesheet" />
+    <link href="./css/slick-theme.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <!-- JS -->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="qcs-header">
+        <div class="container">
+          <div class="qcs-header-box">
+            <a href="/book" class="qcs-header-book">Service Appointment<img src="./img/icon/icon-right-2.svg"/></a>
+            <div class="qcs-header-box-logo"><a href="./"><img src="./img/logo.png" /></a></div>
+            <div class="qcs-header-box-lang">
+              <div class="qcs-header-box-sigin qcs-hide">
+                <button type="button" class="qcs-header-signin" onclick="openSignin()">Sign in</button>
+                <button type="button" class="qcs-header-signup" onclick="openSignup()">Sign up</button>
+              </div>
+              <div class="nav-box-list-menu dropdown">
+                  <button type="button" class="dropdown-toggle" id="list_menu_desktop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="./img/home/personal.svg" alt="Alexandre Paiva" class="qcs-img-personal">
+                      <div class="name">Alexandre Paiva</div>
+                  </button>
+                  <div class="dropdown-menu qcs-dropdown-menu" aria-labelledby="list_menu_desktop">
+                    <div class="menu-list-in-profile">
+                      <div class="list">
+                          <a href="./profile.html" onclick="setProfile('menu_personal')"><span>Personal Information</span></a>
+                      </div>
+                      <div class="list">
+                          <a href="./profile.html" onclick="setProfile('menu_setting')"><span>Setting Password</span></a>
+                      </div>
+                      <div class="list">
+                          <a href="./profile.html" onclick="setProfile('menu_history')"><span>History</span></a>
+                      </div>
+                      <div class="list">
+                          <a href="#"><span>Sign out</span></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <a href="#" class="qcs-header-lang">TH</a>
+              <a href="#" class="qcs-header-lang active">EN</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg qsc-nav">
+        <div class="container">
+          <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./about-us.html">About us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="menu_service" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Our service</a>
+                <div class="dropdown-menu" aria-labelledby="menu_service">
+                  <a class="dropdown-item" href="./condition.html">Check the car condition</a>
+                  <a class="dropdown-item" href="./maintenance.html">Maintenance</a>
+                  <a class="dropdown-item" href="./decorate.html">Decorate</a>
+                  <a class="dropdown-item" href="./onsite.html">Onsite service</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./car.html">Used Car</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./promotion.html">Promotion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact-us.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="qcs-section" id="dashboard">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-xl-11 offset-xl-1">
+            <div class="row">
+              <div class="col-12 col-md-3 col-xl-3 profile-box-left">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <h2>Profile</h2>
+                    <a class="list-group-item list-group-item-action" id="menu_personal" data-toggle="list" href="#personal" role="tab" aria-controls="personal">Personal Information</a>
+                    <a class="list-group-item list-group-item-action" id="menu_setting" data-toggle="list" href="#setting" role="tab" aria-controls="setting">Setting Password</a>
+                    <a class="list-group-item list-group-item-action" id="menu_history" data-toggle="list" href="#history" role="tab" aria-controls="history">History</a>
+                    <div class="list-group-item line"></div>
+                    <a class="list-group-item list-group-item-action" href="#">Sign out</a>
+                </div>
+              </div>
+              <div class="col-12 col-md-9 col-xl-9 profile-box-right">
+                  <div class="tab-content" id="nav-tabContent">
+                      <!-- Personal -->
+                      <div class="tab-pane fade" id="personal" role="tabpanel" aria-labelledby="menu_personal">
+                        <div class="row">
+                          <div class="col-12 col-md-12 col-xl-9">
+                            <h3>Personal Information</h3>
+                            <p class="profile-text">Please do not share the password with others. For the security of your own account</p>
+                            <div class="personal-detail">
+                              <div class="personal-detail-info">
+                                <img src="./img/home/personal.svg">
+                                <div class="box-info">
+                                  <div class="name">Alexandre Paiva</div>
+                                  <span>Tel.</span><span>096 999 9999</span>
+                                </div>
+                              </div>
+                              <div class="box-btn-edit">
+                                <button type="button" class="btn-qcs btn-profile-edit" id="btn_personal_edit">Edit</button>
+                              </div>
+                            </div>
+                            <div class="personal-form">
+                              <form id="form_personal">
+                                <div class="row">
+                                  <div class="col-12 col-md-6 col-xl-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" class="form-control personal-form-input disabled" placeholder="Name" value="Alexandre">
+                                    <div class="input-error" id="name_req">Please enter Name</div>
+                                  </div>
+                                  <div class="col-12 col-md-6 col-xl-6">
+                                    <label for="lastname">Last name</label>
+                                    <input type="text" id="lastname" name="lastname" class="form-control personal-form-input disabled" placeholder="Lastname" value="Paiva">
+                                    <div class="input-error" id="lastname_req">Please enter Last name</div>
+                                  </div>
+                                  <div class="col-12 col-md-6 col-xl-6">
+                                    <label for="tel">Telephone Number</label>
+                                    <input type="text" id="tel" name="tel" class="form-control personal-form-input disabled" placeholder="Telephone Number" value="096 872 2202">
+                                    <div class="input-error" id="tel_req">Please enter Telephone Number</div>
+                                  </div>
+                                  <div class="col-12 col-md-6 col-xl-6">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" class="form-control personal-form-input disabled" placeholder="Email" value="email@email.com">
+                                    <div class="input-error" id="email_req">Please enter Email.</div>
+                                  </div>
+                                  <div class="col-12 col-md-12 col-xl-12">
+                                    <label for="address">Address</label>
+                                    <input type="text" id="address" name="address" class="form-control personal-form-input disabled" placeholder="Address" value="254/59 Amber Condo">
+                                    <div class="input-error" id="email_req">Please enter Address.</div>
+                                  </div>
+                                  <div class="col-12 col-md-12 col-xl-6">
+                                    <label for="sub_district">Sub District</label>
+                                    <select id="sub_district" name="sub_district" class="custom-selectize personal-form-input disabled" data-placeholder="Sub District" tabindex="-1" disabled="true">
+                                      <option value=""></option>
+                                      <option value="1" selected="selected">Sub District 1</option>
+                                      <option value="2">Sub District 2</option>
+                                      <option value="3">Sub District 3</option>
+                                      <option value="4">Sub District 4</option>
+                                    </select>
+                                    <div class="input-error" id="sub_district_req">Please select Sub District.</div>
+                                  </div>
+                                  <div class="col-12 col-md-12 col-xl-6">
+                                    <label for="district">District</label>
+                                    <select id="district" name="district" class="custom-selectize personal-form-input disabled" data-placeholder="District" tabindex="-1" disabled="true">
+                                      <option value=""></option>
+                                      <option value="1">District 1</option>
+                                      <option value="2" selected="selected">District 2</option>
+                                      <option value="3">District 3</option>
+                                      <option value="4">District 4</option>
+                                    </select>
+                                    <div class="input-error" id="district_req">Please select District.</div>
+                                  </div>
+                                  <div class="col-12 col-md-12 col-xl-6">
+                                    <label for="province">Province</label>
+                                    <select id="province" name="province" class="custom-selectize personal-form-input disabled" data-placeholder="Province" tabindex="-1" disabled="true">
+                                      <option value=""></option>
+                                      <option value="1">province 1</option>
+                                      <option value="2">province 2</option>
+                                      <option value="3" selected="selected">province 3</option>
+                                      <option value="4">province 4</option>
+                                    </select>
+                                    <div class="input-error" id="district_req">Please select Province.</div>
+                                  </div>
+                                  <div class="col-12 col-md-6 col-xl-6">
+                                    <label for="postal_code">Postal Code</label>
+                                    <input type="text" id="postal_code" name="postal_code" class="form-control personal-form-input disabled" placeholder="Postal Code" value="10210">
+                                    <div class="input-error" id="postal_code_req">Please enter Postal Code.</div>
+                                  </div>
+                                  <div class="col-12 col-md-12 col-xl-12">
+                                    <div class="form-personal-save">
+                                      <button type="button" class="btn-qcs btn-profile-cancel" id="btn_personal_cancel">Cancel</button>
+                                      <button type="submit" class="btn-qcs btn-profile-confirm" id="btn_personal_confirm">Confirm<img src="./img/icon/icon-right-2-b.svg"></button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Setting password -->
+                      <div class="tab-pane fade" id="setting" role="tabpanel" aria-labelledby="menu_setting">
+                        <div class="row">
+                          <div class="col-12 col-md-12 col-xl-9">
+                            <h3>Setting Password</h3>
+                            <p class="profile-text">Please do not share the password with others. For the security of your own account</p>
+                            <div class="setting-form">
+                              <form id="form_setting">
+                                <div class="row">
+                                  <div class="col-12 col-md-10 col-xl-8">
+                                    <label for="current_password">Current Password</label>
+                                    <div class="setting-password-box-input">
+                                      <input type="password" id="current_password" name="current_password" class="form-control setting-form-input disabled" placeholder="Current Password" value="xxxxxxxx">
+                                      <img src="./img/icon/eye.svg" class="img-icon-eye-inactive" id="current_password_inactive" onclick="viewPassword('current_password')">
+                                      <img src="./img/icon/eye-active.svg" class="img-icon-eye-active" id="current_password_active" onclick="hidePassword('current_password')">
+                                    </div>
+                                    <div class="input-error" id="current_password_req">Please enter Current Password.</div>
+                                  </div>
+                                  <div class="col-12 col-md-10 col-xl-8">
+                                    <label for="new_password">New Password</label>
+                                    <div class="setting-password-box-input">
+                                      <input type="password" id="new_password" name="new_password" class="form-control setting-form-input disabled" placeholder="New Password" value="xxxxxxxx">
+                                      <img src="./img/icon/eye.svg" class="img-icon-eye-inactive" id="new_password_inactive" onclick="viewPassword('new_password')">
+                                      <img src="./img/icon/eye-active.svg" class="img-icon-eye-active" id="new_password_active" onclick="hidePassword('new_password')">
+                                    </div>
+                                    <div class="input-error" id="new_password_req">Please enter New Password.</div>
+                                  </div>
+                                  <div class="col-12 col-md-10 col-xl-8">
+                                    <label for="confirm_password">Confirm Password</label>
+                                    <div class="setting-password-box-input">
+                                      <input type="password" id="confirm_password" name="confirm_password" class="form-control setting-form-input disabled" placeholder="Confirm Password" value="xxxxxxxx">
+                                      <img src="./img/icon/eye.svg" class="img-icon-eye-inactive" id="confirm_password_inactive" onclick="viewPassword('confirm_password')">
+                                      <img src="./img/icon/eye-active.svg" class="img-icon-eye-active" id="confirm_password_active" onclick="hidePassword('confirm_password')">
+                                    </div>
+                                    <div class="input-error" id="confirm_password_req">Please enter Confirm Password.</div>
+                                  </div>
+                                </div>
+                                <div class="setting-button">
+                                  <div class="form-setting-edit active">
+                                    <button type="button" class="btn-qcs btn-profile-edit" id="btn_setting_edit">Edit</button>
+                                  </div>
+                                  <div class="form-setting-save">
+                                    <button type="button" class="btn-qcs btn-profile-cancel" id="btn_setting_cancel">Cancel</button>
+                                    <button type="submit" class="btn-qcs btn-profile-confirm" id="btn_setting_confirm">Confirm<img src="./img/icon/icon-right-2-b.svg"></button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- History -->
+                      <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="menu_history">
+                        <div class="row">
+                          <div class="col-12 col-md-12 col-xl-12">
+                            <h3>History</h3>
+                            <p class="profile-text">Please do not share the password with others. For the security of your own account</p>
+                            <div class="row history-table-title-row">
+                              <div class="col-3 col-md-3 col-xl-3"><p>Appointment date</p></div>
+                              <div class="col-6 col-md-6 col-xl-6"><p>Service</p></div>
+                              <div class="col-3 col-md-3 col-xl-3"><p>Status</p></div>
+                            </div>
+                            <div class="row">
+                              <div class="col-12 col-md-12 col-xl-12">
+                                <div id="history_data">
+                                    <div class="card">
+                                      <div class="card-header" id="head_history_1">
+                                        <div class="row history-table-row collapsed" data-toggle="collapse" href="#history_1" data-target="#history_1" aria-expanded="false" aria-controls="history_1" onclick="getHistoryList(1)">
+                                          <div class="col-3 col-md-3 col-xl-3">01-01-2019</div>
+                                          <div class="col-6 col-md-6 col-xl-6">Maintenance</div>
+                                          <div class="col-3 col-md-3 col-xl-3">
+                                            <div class="history-status">
+                                              <img src="./img/icon/icon-circle.svg">
+                                              <span class="history-padding">Padding</span>
+                                            </div>
+                                          </div>
+                                          <span class="icon-arrow"></span>
+                                        </div>
+                                      </div>
+
+                                      <div id="history_1" class="collapse" aria-labelledby="head_history_1" data-parent="#history_data">
+                                        <div class="card-body">
+                                          <div class="row">
+                                            <div class="col-3 col-md-3 col-xl-3">
+                                              <p class="history-text-title">Car information</p>
+                                            </div>
+                                            <div class="col-3 col-md-3 col-xl-3">
+                                              <p class="history-text-title">License plate</p>
+                                              <p class="history-text-info">กต 9999 กรุงเทพมหานคร</p>
+                                            </div>
+                                            <div class="col-2 col-md-2 col-xl-2">
+                                              <p class="history-text-title">Brand</p>
+                                              <p class="history-text-info">Porsche</p>
+                                            </div>
+                                            <div class="col-2 col-md-2 col-xl-2">
+                                              <p class="history-text-title">Model</p>
+                                              <p class="history-text-info">911 Carrera S</p>
+                                            </div>
+                                            <div class="col-2 col-md-2 col-xl-2">
+                                              <p class="history-text-title">Miles</p>
+                                              <p class="history-text-info">22,980 km</p>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-12 col-md-6 col-xl-6">
+                                              <div class="history-col-list-service">
+                                                <div class="history-list-service active" id="history_list_1_1" onclick="historyList(2, 1)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 1</p>
+                                                    <p class="detail">Maintenance</p>
+                                                  </div>
+                                                </div>
+                                                <div class="history-list-service" id="history_list_1_2" onclick="historyList(1, 2)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 2</p>
+                                                    <p class="detail">Maintenance</p>
+                                                  </div>
+                                                </div>
+                                                <div class="history-list-service" id="history_list_1_3" onclick="historyList(1, 3)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 3</p>
+                                                    <p class="detail">Maintenance</p>
+                                                  </div>
+                                                </div>
+                                                <div class="history-list-service" id="history_list_1_4" onclick="historyList(1, 4)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 4</p>
+                                                    <p class="detail">Maintenance</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-xl-6">
+                                              <div class="history-box-gallery">
+                                                <div class="history-gallery"></div>
+                                                <button type="button" class="btn-history-next-gallery"><img src="./img/icon/icon-history-right.svg"></button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card">
+                                      <div class="card-header" id="head_history_2">
+                                        <div class="row history-table-row collapsed" data-toggle="collapse" href="#history_2"  data-target="#history_2" aria-expanded="false" aria-controls="history_2" onclick="getHistoryList(2)">
+                                          <div class="col-3 col-md-3 col-xl-3">01-08-2019</div>
+                                          <div class="col-6 col-md-6 col-xl-6">Issue</div>
+                                          <div class="col-3 col-md-3 col-xl-3">
+                                            <div class="history-status">
+                                              <img src="./img/icon/icon-check.svg">
+                                              <span class="history-success">Success</span>
+                                            </div>
+                                          </div>
+                                          <span class="icon-arrow"></span>
+                                        </div>
+                                      </div>
+
+                                      <div id="history_2" class="collapse" aria-labelledby="head_history_2" data-parent="#history_data">
+                                        <div class="card-body">
+                                          <div class="row">
+                                            <div class="col-3 col-md-3 col-xl-3">
+                                              <p class="history-text-title">Car information</p>
+                                            </div>
+                                            <div class="col-3 col-md-3 col-xl-3">
+                                              <p class="history-text-title">License plate</p>
+                                              <p class="history-text-info">กต 9999 กรุงเทพมหานคร</p>
+                                            </div>
+                                            <div class="col-2 col-md-2 col-xl-2">
+                                              <p class="history-text-title">Brand</p>
+                                              <p class="history-text-info">Porsche</p>
+                                            </div>
+                                            <div class="col-2 col-md-2 col-xl-2">
+                                              <p class="history-text-title">Model</p>
+                                              <p class="history-text-info">911 Carrera S</p>
+                                            </div>
+                                            <div class="col-2 col-md-2 col-xl-2">
+                                              <p class="history-text-title">Miles</p>
+                                              <p class="history-text-info">22,980 km</p>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-12 col-md-6 col-xl-6">
+                                              <div class="history-col-list-service">
+                                                <div class="history-list-service active" id="history_list_2_1" onclick="historyList(2, 1)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 1</p>
+                                                    <p class="detail">Issue</p>
+                                                  </div>
+                                                </div>
+                                                <div class="history-list-service" id="history_list_2_2" onclick="historyList(2, 2)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 2</p>
+                                                    <p class="detail">Issue</p>
+                                                  </div>
+                                                </div>
+                                                <div class="history-list-service" id="history_list_2_3" onclick="historyList(2, 3)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 3</p>
+                                                    <p class="detail">Issue</p>
+                                                  </div>
+                                                </div>
+                                                <div class="history-list-service" id="history_list_2_4" onclick="historyList(2, 4)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 4</p>
+                                                    <p class="detail">Issue</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-xl-6">
+                                              <div class="history-box-gallery">
+                                                <div class="history-gallery"></div>
+                                                <button type="button" class="btn-history-next-gallery"><img src="./img/icon/icon-history-right.svg"></button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card">
+                                      <div class="card-header" id="head_history_3">
+                                        <div class="row history-table-row collapsed" data-toggle="collapse" href="#history_3"  data-target="#history_3" aria-expanded="false" aria-controls="history_3" onclick="getHistoryList(3)">
+                                          <div class="col-3 col-md-3 col-xl-3">01-08-2019</div>
+                                          <div class="col-6 col-md-6 col-xl-6">Issue</div>
+                                          <div class="col-3 col-md-3 col-xl-3">
+                                            <div class="history-status">
+                                              <img src="./img/icon/icon-check.svg">
+                                              <span class="history-success">Success</span>
+                                            </div>
+                                          </div>
+                                          <span class="icon-arrow"></span>
+                                        </div>
+                                      </div>
+                                      <div id="history_3" class="collapse" aria-labelledby="head_history_3" data-parent="#history_data">
+                                        <div class="card-body">
+                                          <div class="row">
+                                            <div class="col-3 col-md-3 col-xl-3">
+                                              <p class="history-text-title">Car information</p>
+                                            </div>
+                                            <div class="col-3 col-md-3 col-xl-3">
+                                              <p class="history-text-title">License plate</p>
+                                              <p class="history-text-info">กต 9999 กรุงเทพมหานคร</p>
+                                            </div>
+                                            <div class="col-2 col-md-2 col-xl-2">
+                                              <p class="history-text-title">Brand</p>
+                                              <p class="history-text-info">Porsche</p>
+                                            </div>
+                                            <div class="col-2 col-md-2 col-xl-2">
+                                              <p class="history-text-title">Model</p>
+                                              <p class="history-text-info">911 Carrera S</p>
+                                            </div>
+                                            <div class="col-2 col-md-2 col-xl-2">
+                                              <p class="history-text-title">Miles</p>
+                                              <p class="history-text-info">22,980 km</p>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-12 col-md-6 col-xl-6">
+                                              <div class="history-col-list-service">
+                                                <div class="history-list-service active" id="history_list_3_1" onclick="historyList(3, 1)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 1</p>
+                                                    <p class="detail">Issue</p>
+                                                  </div>
+                                                </div>
+                                                <div class="history-list-service" id="history_list_3_2" onclick="historyList(3, 2)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 2</p>
+                                                    <p class="detail">Issue</p>
+                                                  </div>
+                                                </div>
+                                                <div class="history-list-service" id="history_list_3_3" onclick="historyList(3, 3)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 3</p>
+                                                    <p class="detail">Issue</p>
+                                                  </div>
+                                                </div>
+                                                <div class="history-list-service" id="history_list_3_4" onclick="historyList(3, 4)">
+                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <div class="box-text">
+                                                    <p class="title">Service 4</p>
+                                                    <p class="detail">Issue</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-xl-6">
+                                              <div class="history-box-gallery">
+                                                <div class="history-gallery"></div>
+                                                <button type="button" class="btn-history-next-gallery"><img src="./img/icon/icon-history-right.svg"></button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <footer>
+      <div class="qcs-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-4 col-md-2 col-xl-2">
+              <ul class="list-unstyled qcs-footer-link">
+                <li><a href="./about-us.html">About us</a></li>
+                <li><a>Our service</a></li>
+                <li><a href="./condition.html" class="disable">Check the car condition</a></li>
+                <li><a href="./maintenance.html" class="disable">Maintenance</a></li>
+                <li><a href="./decorate.html" class="disable">Decorate</a></li>
+                <li><a href="./onsite.html" class="disable">Onsite service</a></li>
+              </ul>
+            </div>
+            <div class="col-4 col-md-2 col-xl-2">
+              <ul class="list-unstyled qcs-footer-link">
+                <li><a href="./car.html">Used Car</a></li>
+                <li><a href="./promotion.html">Promotion</a></li>
+              </ul>
+            </div>
+            <div class="col-4 col-md-2 col-xl-3">
+              <ul class="list-unstyled qcs-footer-link">
+                <li><a href="./news.html" class="active">News</a></li>
+                <li><a href="./contact-us.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-xl-5">
+              <div class="qcs-footer-right">
+                <form class="form-subscribe">
+                  <input type="email" name="subscribe" id="subscribe" class="input-subscribe" placeholder="Enter your email">
+                  <button type="submit" class="btn-subscribe">SUBSCRIBE</button>
+                </form>
+                <div class="qcs-footer-connect">
+                  <p>Connect with QCS</p>
+                  <div class="footer-social">
+                    <a target="_blank" href="#"><img src="./img/icon/facebook.svg"></a>
+                    <a target="_blank" href="#"><img src="./img/icon/line.svg"></a>
+                    <a target="_blank" href="#"><img src="./img/icon/twitter.svg"></a>
+                    <a target="_blank" href="#"><img src="./img/icon/youtube.svg"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="qcs-copyright">
+        <div class="container">
+          <span>© 2019 QCS CO., LTD</span>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/js.js"></script>
+    <!-- Page prfile -->
+    <link rel="stylesheet" type="text/css" href="./css/selectize.css">
+    <link rel="stylesheet" type="text/css" href="./css/profile.css">
+    <script type="text/javascript" src="./js/selectize.min.js"></script>
+    <script type="text/javascript" src="./js/profile.js"></script>
+  </body>
+</html>
