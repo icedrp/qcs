@@ -1,0 +1,19 @@
+#contact_us{padding: 60px 0;}
+.contact-us-row-form{
+	justify-content: center;
+	padding: 60px 0;
+}
+.btn-send-contact{
+	background-color: #F7B300;
+	color: #ffffff;
+	height: 47px;
+	width: 133px;
+	padding: .5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.contact-us-col-content{padding-left: 8%;}
+.contact-info-box{display: flex;align-items: center;padding: 10px 0;}
+.contact-info-box > .box-icon{width: 15%;}
+.contact-info-box > .box-info{width: 85%;line-height: 18px;}

@@ -1,0 +1,15 @@
+#page_car{padding: 60px 0 120px;}
+.car-row-filter{justify-content: center;padding: 40px 0;}
+.car-sort-by{display: flex;justify-content: flex-end;align-items: center;}
+.car-sort-by span{padding-right: 15px;}
+.car-select-sort-by{width: 100px;}
+/* Car Card */
+.car-card-row{align-items: center;padding: 30px 0;border-top: 1px solid #EBEBEB;}
+.car-card-row:first-child{border-top: none;}
+.car-card-box-detail{padding-left: 15px;}
+.car-card-detail{display: flex;}
+.car-card-detail > img{margin-right: 15px;}
+.car-card-title > .name{font-size: 28px;font-family: 'PragatiNarrow-Bold';margin-bottom: 0;}
+.car-card-title > .box-info{font-size: 18px;}
+.car-card-price{font-size: 32px;font-family: 'PragatiNarrow-Bold';margin: 30px 0;}
+.car-card-link{display: flex;justify-content: space-between;align-items: center;}
