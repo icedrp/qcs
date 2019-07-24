@@ -640,9 +640,11 @@ a:hover .card-our-service{
 @media (min-width: 320px) and (max-width: 767px){
   /*Global*/
   h1{font-size: 32px;}
+  h4{font-size: 22px;}
   .slick-slide-p-m{padding: 0 5px 0 15px;}
   .btn-home-more-m{color: #F7B300;display: flex;align-items: center;font-size: 13px;}
   .btn-home-more-m img{margin-left: 5px;}
+  .qcs-section{padding:90px 0 30px;}
   /*Nav*/
   header{
     position: fixed;

@@ -1,19 +1,27 @@
-#contact_us{padding: 60px 0;}
 .contact-us-row-form{
 	justify-content: center;
 	padding: 60px 0;
+	flex-direction: row-reverse;
 }
 .btn-send-contact{
 	background-color: #F7B300;
-	color: #ffffff;
+	color: #000000;
 	height: 47px;
 	width: 133px;
 	padding: .5rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	border:none;
 }
 .contact-us-col-content{padding-left: 8%;}
 .contact-info-box{display: flex;align-items: center;padding: 10px 0;}
 .contact-info-box > .box-icon{width: 15%;}
 .contact-info-box > .box-info{width: 85%;line-height: 18px;}
+
+@media (min-width: 320px) and (max-width: 767px){
+	.contact-us-row-form{flex-direction: unset;padding: 0;}
+	.contact-us-col-content{padding: 36px 15px 18px;}
+	.contact-info-box > .box-info{font-size: 14px;}
+
+}

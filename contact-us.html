@@ -35,7 +35,12 @@
       <div class="qcs-header">
         <div class="container">
           <div class="qcs-header-box">
-            <a href="/book" class="qcs-header-book">Service Appointment<img src="./img/icon/icon-right-2.svg"/></a>
+            <button class="navbar-toggler btn-hamberger" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/book" class="qcs-header-book">Book Service<img src="./img/icon/icon-right-2.svg"/></a>
             <div class="qcs-header-box-logo"><a href="./"><img src="./img/logo.png" /></a></div>
             <div class="qcs-header-box-lang">
               <div class="qcs-header-box-sigin qcs-hide">
@@ -95,7 +100,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="./news.html">News</a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="./contact-us.html">Contact Us</a>
               </li>
             </ul>
@@ -103,7 +108,7 @@
         </div>
       </nav>
     </header>
-    <section id="contact_us">
+    <section class="qcs-section" id="contact_us">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-12 col-xl-10">
@@ -111,24 +116,6 @@
           </div>
         </div>
         <div class="row contact-us-row-form">
-          <div class="col-12 col-md-6 col-xl-6">
-            <form role="form" name="contact_data" method="post" onsubmit="return check_data();" enctype="multipart/form-data">
-              <input type="text" name="contact_name" id="contact_name" placeholder="Name" class="qcs-input">
-              <div class="qcs-input-error" id="contact_name_req">Please enter name.</div>
-
-              <input type="tel" name="contact_phone" id="contact_phone" placeholder="Telephone Number" class="qcs-input">
-              <div class="qcs-input-error" id="contact_phone_req">Please enter Telephone Number.</div>
-
-              <input type="email" name="contact_email" id="contact_email" placeholder="Email" class="qcs-input">
-              <div class="qcs-input-error" id="contact_email_req">Please enter Email.</div>
-
-              <textarea name="contact_message" id="contact_message" placeholder="Message" class="qcs-textarea"></textarea>
-              <div class="qcs-input-error" id="contact_message_req">Please enter Message.</div>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="btn-send-contact">Send<img src="./img/icon/icon-right-2.svg"></button>
-              </div>
-            </form>
-          </div>
           <div class="col-12 col-md-6 col-xl-4 contact-us-col-content">
             <h4>QCS.CO.,LTD</h4>
             <div class="contact-info-box">
@@ -153,6 +140,25 @@
               <div class="box-info">+66 987 9809, +66 987 9809</div>
             </div>
           </div>
+          <div class="col-12 col-md-6 col-xl-6">
+            <form role="form" name="contact_data" method="post" onsubmit="return check_data();" enctype="multipart/form-data">
+              <input type="text" name="contact_name" id="contact_name" placeholder="Name" class="qcs-input">
+              <div class="qcs-input-error" id="contact_name_req">Please enter name.</div>
+
+              <input type="tel" name="contact_phone" id="contact_phone" placeholder="Telephone Number" class="qcs-input">
+              <div class="qcs-input-error" id="contact_phone_req">Please enter Telephone Number.</div>
+
+              <input type="email" name="contact_email" id="contact_email" placeholder="Email" class="qcs-input">
+              <div class="qcs-input-error" id="contact_email_req">Please enter Email.</div>
+
+              <textarea name="contact_message" id="contact_message" placeholder="Message" class="qcs-textarea"></textarea>
+              <div class="qcs-input-error" id="contact_message_req">Please enter Message.</div>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn-send-contact">Send<img src="./img/icon/icon-right-2-b.svg"></button>
+              </div>
+            </form>
+          </div>
+          
         </div>
       </div>
     </section>
@@ -160,7 +166,7 @@
       <div class="qcs-footer">
         <div class="container">
           <div class="row">
-            <div class="col-4 col-md-2 col-xl-2">
+            <div class="col-5 col-md-2 col-xl-2">
               <ul class="list-unstyled qcs-footer-link">
                 <li><a href="./about-us.html">About us</a></li>
                 <li><a>Our service</a></li>
@@ -176,7 +182,7 @@
                 <li><a href="./promotion.html">Promotion</a></li>
               </ul>
             </div>
-            <div class="col-4 col-md-2 col-xl-3">
+            <div class="col-3 col-md-2 col-xl-3">
               <ul class="list-unstyled qcs-footer-link">
                 <li><a href="./news.html">News</a></li>
                 <li><a href="./contact-us.html" class="active">Contact Us</a></li>
