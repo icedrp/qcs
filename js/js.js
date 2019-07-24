@@ -69,15 +69,15 @@ function setProfile(name){
 // Login & Regis
 function closePopup(){
   $('html').removeClass('noScroll');
-  $('.qcs-popup, .form-regis, .form-login').hide();
+  $('#popup_login_regis, .form-regis, .form-login').hide();
 }
 function openSignin(){
   $('html').addClass('noScroll');
   $('.form-regis').hide();
-  $('.qcs-popup, .form-login').show();
+  $('#popup_login_regis, .form-login').show();
 }
 function openSignup(){
   $('html').addClass('noScroll');
   $('.form-login').hide();
-  $('.qcs-popup, .form-regis').show();
+  $('#popup_login_regis, .form-regis').show();
 }
