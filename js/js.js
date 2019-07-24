@@ -23,8 +23,9 @@ $(document).ready(function() {
         breakpoint: 767,
         settings: {
           arrows: false,
+          dots: false,
           centerMode: true,
-          centerPadding: "60px",
+          centerPadding: "40px",
           slidesToShow: 2
         }
       }
@@ -45,6 +46,22 @@ $(document).ready(function() {
       $(this).removeClass('active');
     }
   });
+
+  // Mobile 
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    
+    $("#home_promotion_service_slide").slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: false,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      centerMode: true,
+      centerPadding: "40px",
+    });
+  }
 });
 var lastScrollTop = 0;
 $(window).on("scroll", function() {
