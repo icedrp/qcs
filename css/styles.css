@@ -170,6 +170,18 @@ header.active{
   color: #F7B300;
 }
 .navbar-nav .dropdown-menu{margin-top: 10px;}
+.btn-hamberger{display: none;}
+.btn-hamberger .icon-bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #FFFFFF;
+  margin: 6px 0;
+}
+.btn-hamberger:focus{outline: none;}
+.img-home-slide{width: 100%;display: block;}
+.qcs-slide-content{text-align: left;}
 
 /* Footer */
 .qcs-footer{background-color: #FAFAFA;padding: 40px 0;}
@@ -340,31 +352,33 @@ textarea.form-control{padding: 15px 25px 0;}
 
 /* Home our service */
 #home_our_service{padding: 60px 0;}
-.crad-our-service{position: relative;height: 100%;}
-.crad-our-service-img img{width: 100%;}
-.crad-our-service-content{
+.card-our-service{position: relative;height: 100%;}
+.card-our-service-img img{width: 100%;}
+.card-our-service-content{
   position: absolute;
   background-color: rgba(0,0,0, 0.1);
   padding: 30px;
   bottom: 0;
   width: 100%;
   color: #ffffff;
+  height: 100%;
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
 }
-.crad-our-service-content > img{padding-right: 16px;margin-top: 16px;}
-.crad-our-service-content > .box-text > .title{font-size: 26px;font-family: 'PragatiNarrow-Bold';}
-.crad-our-service-content > .box-text{width: 100%;padding-right: 30px;}
-.crad-our-service-content > .box-text > .info{display: none;}
-a:hover .crad-our-service-content > .box-text > .info{
+.card-our-service-content-body{display: flex;align-items: baseline;width: 100%;}
+.card-our-service-content img{padding-right: 16px;margin-top: 16px;}
+.card-our-service-content .box-text > .title{font-size: 26px;font-family: 'PragatiNarrow-Bold';}
+.card-our-service-content .box-text{width: 100%;padding-right: 30px;}
+.card-our-service-content .box-text > .info{display: none;}
+a:hover .card-our-service-content .box-text > .info{
   display: block;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-a:hover .crad-our-service-content{border-bottom: 7px solid #F7B300;padding-bottom: 15px;}
-a:hover .crad-our-service{
+a:hover .card-our-service-content{border-bottom: 7px solid #F7B300;padding-bottom: 15px;}
+a:hover .card-our-service{
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -619,8 +633,81 @@ a:hover .crad-our-service{
 }
 
 
+/*##########################################
+                Responsive 
+##########################################*/
+
+@media (min-width: 320px) and (max-width: 767px){
+  /*Global*/
+  h1{font-size: 32px;}
+  .slick-slide-p-m{padding: 0 5px 0 15px;}
+  .btn-home-more-m{color: #F7B300;display: flex;align-items: center;font-size: 13px;}
+  .btn-home-more-m img{margin-left: 5px;}
+  /*Nav*/
+  header{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+  .qcs-header-box-lang, .qsc-nav{display: none;}
+  .qcs-header-box-logo img{width: 96px;height: 26px;}
+  .btn-hamberger{display: block;}
+  .qcs-header-book{margin-right: 0;font-size: 10px;padding: .5rem;height: 26px;}
+  .qcs-header-book img{padding-left: 7px;}
+
+  /* Footer */
+  .qcs-footer-link > li{font-size: 14px;}
+  .form-subscribe{padding: 0 0 32px;}
+  .qcs-footer-connect{text-align: center;}
+  .qcs-copyright > .container{justify-content: center;font-size: 14px;}
+
+  /* Home slide */
+  #home_slide{padding-top: 60px;}
+  .carousel-control-prev, .carousel-control-next{display: none;}
+  .img-home-slide{height: 297px;object-fit: cover;object-position: center;}
+  .carousel-caption{width: 100%;left: 0;right: 0;bottom: 50%;padding: 0;transform: translate(0, 60%);}
+  .qcs-slide h1 {font-size: 32px;text-align: center;}
+  .qcs-slide-content{display: flex;flex-direction: column;align-items: center;padding: 0 40px;text-align: center;font-size: 12px;}
+  .qcs-slide-btn{width: 94px;height: 37px;font-size: 12px;}
+
+  /*Home Our service*/
+  #home_our_service{padding: 36px 0 0;}
+  .home-our-service-row{padding: 5px 0;}
+  .home-h1{text-align: left;display: flex;justify-content: space-between;}
+  .card-our-service-content .box-text > .title{font-size: 24px;}
+  .home-our-service-p{padding: 5px 0;}
+  .card-our-service-content{padding: 20px 25px;align-items: flex-end;height: 100%;}
+  .card-our-service-content .box-text > .info{display: block;width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+  .card-our-service-img img {height: 26vh;object-fit: cover;object-position: center;}
+  .qcs-home-box-btn{display: none;}
+
+  /* Home promotion */
+  #home_promotion_service{padding: 36px 0 0;}
+  .home-promotion-service-content > .box-info{display: none;}
+  .home-promotion-service-content{margin: 0;}
+  .home-promotion-service-content > .box-title{width: 100%;font-size: 14px;padding: 15px 0;}
+  #home_promotion_service_slide .slick-list {padding: 0px 30px 0 0 !important;}
+
+  /* Home new */
+  #home_our_news{padding: 36px 0 0;}
+  .crad-our-news{padding-bottom: 20px;}
 
 
+  /* Home car recommend */
+  #home_car_recommend{padding: 36px 0;}
+  #car_recommend .slick-list {padding: 0px 30px 0 0 !important;}
+  .home-car-price{font-size: 18px;padding: 15px 0;}
+  .home-car-content > .box-title > p{font-size: 14px;}
+  .tag-news{margin-right: 5px;font-size: 10px;width: 24px;height: 18px;padding: 0;}
+  .home-car-content > .box-info{font-size: 10px;}
+  .home-car-content > .box-info > .car-model{padding-right: 5px;}
+  .home-car-content{padding: 10px 0 16px;}
+
+}
+@media (width: 320px) {
+  .home-h1{font-size: 28px;}
+}
 
 
 

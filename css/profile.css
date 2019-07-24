@@ -10,8 +10,8 @@
     height: 65px;
 }
 .personal-detail-info .box-info .name{font-size: 24px;font-family: 'PragatiNarrow-Bold';}
-.profile-box-left{border-right: 1px solid #E6E6E6;padding-right: 0;}
-.profile-box-right{padding:15px 0 15px 50px;}
+.profile-box-left{padding-right: 0;}
+.profile-box-right{padding:15px 0 15px 50px;border-left: 1px solid #E6E6E6;}
 .profile-box-right h3{font-size: 28px;}
 .form-personal-save{display: none;}
 .form-personal-save.active{display: flex;padding-top: 20px;}
