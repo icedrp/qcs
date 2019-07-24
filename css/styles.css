@@ -692,6 +692,9 @@ a:hover .card-our-service{
   /* Home new */
   #home_our_news{padding: 36px 0 0;}
   .crad-our-news{padding-bottom: 20px;}
+  .home-our-news-content > .box-title > p{font-size: 16px;line-height: 16px;}
+  .home-our-news-content > .box-date{font-size: 14px;}
+  .home-our-news-content > .box-info{font-size: 12px;line-height: normal;}
 
 
   /* Home car recommend */
