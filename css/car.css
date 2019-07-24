@@ -13,3 +13,65 @@
 .car-card-title > .box-info{font-size: 18px;}
 .car-card-price{font-size: 32px;font-family: 'PragatiNarrow-Bold';margin: 30px 0;}
 .car-card-link{display: flex;justify-content: space-between;align-items: center;}
+
+/* Car detail */
+.car-detail-header-name{display: flex;align-items: center;justify-content: center;}
+.car-detail-header-name h2{margin: 0;}
+.car-detail-header-name img{width: 10px;height: 22px;margin: 0 50px;}
+.car-detail-list-group{flex-direction: unset;justify-content: center;}
+.car-detail-list-group .list-group-item{
+	width: 107px;
+	height: 36px;
+	padding: 0;
+	margin: 30px 0;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.car-detail-list-group .list-group-item.active {
+    color: #000000;
+    background-color: #F7B300;
+    border-color: #F7B300;
+}
+.car-detail-list-group .list-group-item:first-child {border-top-left-radius: 0;border-top-right-radius: 0;}
+.car-detail-list-group .list-group-item:last-child {border-bottom-right-radius: 0;border-bottom-left-radius: 0;}
+.car-detail-box-title{display: flex;align-items: center;justify-content: space-between;padding: 50px 0 30px;}
+.car-detail-title-left{display: flex;align-items: center;}
+.car-detail-title-left > img {margin-right: 15px;width: 85px;height: 85px;object-fit: cover;object-position: center;}
+.car-detail-name > .name {font-size: 38px;font-family: 'PragatiNarrow-Bold';margin-bottom: 0;}
+.car-detail-name > .box-info {font-size: 18px;}
+.car-detail-title-right .price{font-size: 32px;font-family: 'PragatiNarrow-Bold';text-align: right;}
+.car-detail-contact{padding: 30px 0 0;}
+.car-detail-contact span{font-size: 18px;font-family: 'PragatiNarrow-Bold';margin: 0 7.5px 0 0;}
+.car-detail-contact img{width: 43px;height: 43px;margin: 0 7.5px;}
+
+/* Car detail info */
+.car-detail-info{padding: 60px;}
+.car-detail-info-list{padding: 32px 0 16px;border-bottom: 1px solid #DBDBDB;display: flex;align-items: center;justify-content: space-between;}
+.car-detail-info-list-title{font-size: 16px;font-family: 'PragatiNarrow-Bold';}
+.car-detail-info-list-data{text-align: right;font-size: 14px;color: #666666;}
+.car-detail-info-list-data p{margin: 0;}
+.car-detail-info-color{width: 25px;height: 25px;border-radius: 50%;}
+#car_detail_vehicle .car-detail-info-list{display: block;}
+#car_detail_vehicle .car-detail-info-list-data{text-align: left;}
+
+
+
+
+/* Car detail info color */
+.bg-blue{background-color: #1F62E0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

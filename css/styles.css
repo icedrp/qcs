@@ -298,14 +298,14 @@ header.active{
   height: 1.5rem;
   line-height: 2;
 }
-.form-control{border:1px solid #EFEFEF;border-radius: 0;padding: 0 25px;height: 44px;}
+.form-control{border:1px solid #D9D9D9;border-radius: 0;padding: 0 25px;height: 44px;}
 .form-control:focus{outline: none;box-shadow: 0 0 0 0.2rem rgba(247, 179, 0,.25);border-color: #F7B300;}
 .form-control.disabled{background-color: #F7F7F7;color: #9F9F9F;cursor: not-allowed;pointer-events: none;}
-.custom-selectize{display: block;width: 100%;border:1px solid #EFEFEF;border-radius:0;padding: 0 10px;}
+.custom-selectize{display: block;width: 100%;border:1px solid #D9D9D9;border-radius:0;padding: 0 10px;}
 .custom-selectize.disabled{height: 44px;}
 .selectize-control.custom-selectize{padding: 0;}
 .selectize-control.single .selectize-input, .selectize-dropdown.single {
-  border: 1px solid #EFEFEF;
+  border: 1px solid #D9D9D9;
   display: flex;
   align-items: center;
 }
@@ -315,6 +315,28 @@ select {text-indent: 16px;-webkit-appearance: none;-webkit-border-radius: 0px;}
 .list-group-item{border: none;padding: .75rem 0;margin-bottom: 0;font-size: 18px;color: #A7A7A7;}
 .list-group-item.active {color: #F7B300;background-color: #FFFFFF;border-color: #FFFFFF;}
 .list-group-item.line{background-color: #E6E6E6;height: 1px;padding: 0;margin: .75rem 0;}
+textarea.form-control{padding: 15px 25px 0;}
+[type="date"] {
+  background:#fff url('../img/icon/icon-calendar.svg')  96% 50% no-repeat ;
+  cursor: pointer;
+}
+[type="date"]::-webkit-inner-spin-button {display: none;}
+[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+[type="date"]::before {color: #999999;content: attr(placeholder);}
+[type="date"] {color: #ffffff;}
+[type="date"]:focus, [type="date"]:valid {color: #666666;}
+[type="date"]:focus::before, [type="date"]:valid::before {content: "" !important;}
 
 /* Home our service */
 #home_our_service{padding: 60px 0;}
@@ -587,6 +609,14 @@ a:hover .crad-our-service{
 .qcs-link-open{font-size: 14px;}
 .qcs-link-open span{color: #0074FB;text-decoration: underline;cursor: pointer;}
 .form-login, .form-regis{display: none;}
+#booking .qcs-field{margin: 0;}
+.btn-booking-confirm {
+  width: 133px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
 
 

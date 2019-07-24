@@ -121,10 +121,10 @@
 .selectize-dropdown,
 .selectize-input,
 .selectize-input input {
-  color: #303030;
+  color: #000000;
   font-family: inherit;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 16px;
   -webkit-font-smoothing: inherit;
 }
 .selectize-input,
@@ -170,7 +170,6 @@
   display: inline-block;
   zoom: 1;
   *display: inline;
-  margin-top: 5px;
 }
 .selectize-control.multi .selectize-input > div {
   cursor: pointer;
@@ -197,7 +196,7 @@
   min-height: 0 !important;
   max-height: none !important;
   max-width: 100% !important;
-  margin: 5px 2px 0 0 !important;
+  margin: 0 2px 0 0 !important;
   text-indent: 0 !important;
   border: 0 none !important;
   background: none !important;

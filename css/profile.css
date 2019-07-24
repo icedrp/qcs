@@ -1,5 +1,5 @@
 .profile-text{color: #666666;font-size: 14px;}
-.personal-detail{display: flex;align-items: center;justify-content: space-between;}
+.personal-detail{display: flex;align-items: center;justify-content: space-between;padding-bottom: 25px;}
 .personal-detail-info{display: flex;align-items: center;}
 .personal-detail-info img{
 	border-radius: 50%;

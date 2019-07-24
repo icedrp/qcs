@@ -1,0 +1,48 @@
+.choosing-detail-user{display: flex;align-items: center;padding: 60px 0 30px;}
+.choosing-detail-user img {
+    border-radius: 50%;
+    margin-right: 30px;
+    object-fit: cover;
+    object-position: center;
+    width: 65px;
+    height: 65px;
+}
+.choosing-detail-user .box-info .name {font-size: 24px;font-family: 'PragatiNarrow-Bold';}
+.choosing-detail-booking{padding: 25px 0 50px;border-top:1px solid #ECECEC;border-bottom:1px solid #ECECEC;margin-top: -1px;}
+.choosing-title{font-size: 16px;font-family: 'PragatiNarrow-Bold';margin:0;}
+.choosing-info{font-size: 14px;color: #666666;margin:0;}
+.choosing-button{display: flex;align-items: center;justify-content: center;padding: 60px 0;}
+.btn-choosing-cancel {
+    background-color: #ffffff;
+    border: 1px solid #979797;
+    width: 133px;
+    height: 47px;
+    margin-right: 25px;
+}
+.btn-choosing-confirm{
+	width: 133px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.confirm-booking-title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 36px;
+	font-family: 'PragatiNarrow-Bold';
+	padding-top: 30px;
+}
+.confirm-booking-title img{margin-left: 15px;}
+.confirm-booking-text{padding: 0 30px;text-align: center;}
+.confirm-booking-button{display: flex;justify-content: center;}
+.btn-go-home{
+	width: 165px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 50px 0;
+}
+.btn-go-home:hover{color: #000000;}
