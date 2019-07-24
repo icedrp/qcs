@@ -35,7 +35,7 @@
       <div class="qcs-header">
         <div class="container">
           <div class="qcs-header-box">
-            <button class="navbar-toggler btn-hamberger" type="button">
+            <button class="navbar-toggler btn-hamberger" type="button" onclick="openNav()">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -108,6 +108,58 @@
         </div>
       </nav>
     </header>
+    <!-- Menu mobile -->
+    <div class="bg-overlay"></div>
+    <div class="qcs-overlay">
+      <div class="qcs-overlay-close">
+        <img src="./img/icon/icon-close-w.svg" onclick="closeNav()">
+      </div>
+      <div class="qcs-overlay-menu">
+        <div class="qcs-link-menu-m qcs-hide" id="menu_user">
+          <div class="box-menu" data-toggle="collapse" data-target="#menu_show_user" aria-expanded="true" aria-controls="menu_show_user">
+                <img src="./img/home/personal.svg" alt="Alexandre Paiva" class="qcs-img-personal">
+                <span class="name">Alexandre PaivaAlexandre PaivaAlexandre Paiva</span>
+                <span class="icon"></span>
+            </div>
+            <div class="qcs-link-menu-m-box-sub collapse show" id="menu_show_user" aria-labelledby="menu_user">
+              <a class="qcs-link-menu-m-sub" href="./profile.html" onclick="setProfile('menu_personal')"><span>Personal Information</span></a>
+              <a class="qcs-link-menu-m-sub" href="./profile.html" onclick="setProfile('menu_setting')"><span>Setting Password</span></a>
+              <a class="qcs-link-menu-m-sub" href="./profile.html" onclick="setProfile('menu_history')"><span>History</span></a>
+              <a class="qcs-link-menu-m-sub" href="#"><span>Sign out</span></a>
+          </div>
+        </div> 
+        <a class="qcs-link-menu-m" href="./about-us.html">About us</a>
+        <div class="qcs-link-menu-m" id="menu_our_service">
+            <div class="box-menu" data-toggle="collapse" data-target="#menu_show" aria-expanded="true" aria-controls="menu_show">
+                <span>Our service</span>
+                <span class="icon"></span>
+            </div>
+            <div class="qcs-link-menu-m-box-sub collapse" id="menu_show" aria-labelledby="menu_our_service">
+              <a class="qcs-link-menu-m-sub" href="./condition.html">Check the car condition</a>
+              <a class="qcs-link-menu-m-sub" href="./maintenance.html">Maintenance</a>
+              <a class="qcs-link-menu-m-sub" href="./decorate.html">Decorate</a>
+              <a class="qcs-link-menu-m-sub" href="./onsite.html">Onsite service</a>
+          </div>
+        </div>
+        <a class="qcs-link-menu-m" href="./car.html">Used Car</a>
+        <a class="qcs-link-menu-m" href="./promotion.html">Promotion</a>
+        <a class="qcs-link-menu-m" href="./news.html">News</a>
+        <a class="qcs-link-menu-m" href="./contact-us.html">Contact us</a>
+      </div>
+      <div class="qcs-overlay-lang">
+        <div class="qcs-overlay-box-sign">
+          <div class="box-sign">
+            <button type="button" class="btn-sign-in-m" onclick="openSignin()">Sign in</button>
+            <button type="button" class="btn-sign-up-m" onclick="openSignup()">Sign up</button>
+          </div>
+        </div>
+        <div class="box-lang">
+          <a class="btn-lang-m" href="#">TH</a>
+          <a class="btn-lang-m active" href="#">EN</a>
+        </div>
+      </div>
+    </div>
+
     <!-- LOGIN & REGIS -->
     <div class="qcs-popup" id="popup_login_regis">
       <div class="qcs-popup-bg">
@@ -343,7 +395,7 @@
     </section>
     <section id="home_our_news">
       <div class="container">
-        <h1 class="home-h1">Our News <a href="./new.html" class="btn-home-more-m">Discover more<img src="./img/icon/icon-right-2-c.svg"></a></h1>
+        <h1 class="home-h1">Our News <a href="./news.html" class="btn-home-more-m">Discover more<img src="./img/icon/icon-right-2-c.svg"></a></h1>
         <div class="row">
           <div class="col-12 col-md-6 col-xl-6">
             <a href="./new-detail.html"><div class="crad-our-news">
@@ -378,7 +430,7 @@
         <div class="row">
           <div class="col-12 col-md-12 col-xl-12">
             <div class="qcs-home-box-btn">
-              <a href="./new.html" class="btn-home-more">Discover more<img src="./img/icon/icon-right-2-b.svg"></a>
+              <a href="./news.html" class="btn-home-more">Discover more<img src="./img/icon/icon-right-2-b.svg"></a>
             </div>
           </div>
         </div>

@@ -87,14 +87,38 @@ function setProfile(name){
 function closePopup(){
   $('html').removeClass('noScroll');
   $('#popup_login_regis, .form-regis, .form-login').hide();
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    $('header, section, footer').removeClass('blur-filter');
+  }
 }
 function openSignin(){
+  closeNav();
   $('html').addClass('noScroll');
   $('.form-regis').hide();
   $('#popup_login_regis, .form-login').show();
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    $('header, section, footer').addClass('blur-filter');
+  }
 }
 function openSignup(){
+  closeNav();
   $('html').addClass('noScroll');
   $('.form-login').hide();
   $('#popup_login_regis, .form-regis').show();
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    $('header, section, footer').addClass('blur-filter');
+  }
+}
+
+
+// Nav menu mobile
+function openNav(){
+  $('html').addClass('noScroll');
+  $('header, section, footer').addClass('blur-filter');
+  $('.bg-overlay, .qcs-overlay').addClass('active');
+}
+function closeNav(){
+  $('html').removeClass('noScroll');
+  $('header, section, footer').removeClass('blur-filter');
+  $('.bg-overlay, .qcs-overlay').removeClass('active');
 }
