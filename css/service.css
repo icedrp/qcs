@@ -1,4 +1,4 @@
-.service-content{margin-top: -60px;align-items: center;}
+.service-content{margin-top: -60px;}
 .service-list{
 	display: flex;
 	padding: 25px 0;
@@ -49,3 +49,4 @@
     max-width: 1200px;
     position: relative;
 }
+.service-content-left{padding-top: 120px;}

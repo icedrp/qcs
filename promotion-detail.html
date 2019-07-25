@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable = no"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>QCS</title>
     <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
@@ -162,7 +162,7 @@
     <section class="qcs-section" id="promotion_detail">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-12 col-xl-10 offset-xl-1">
+          <div class="col-12 col-md-12 col-xl-10 offset-xl-1 p-0-m">
             <div class="qcs-slide-box-image">
               <div id="promotion_detail_slide">
                 <img src="./img/news/image-slide.png"/>
@@ -269,6 +269,22 @@
             autoplaySpeed: 5000,
             prevArrow: $('.qcs-slide-arrow-left'),
             nextArrow: $('.qcs-slide-arrow-right'),
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  arrows: false,
+                  dots: true,
+                }
+              },
+              {
+                breakpoint: 767,
+                settings: {
+                  arrows: false,
+                  dots: true,
+                }
+              }
+            ]
         });
         
       });

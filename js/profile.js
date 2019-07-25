@@ -132,9 +132,9 @@ function getHistoryList(id){
 function historyList(id, list_id){
 	$('#history_'+id+' .history-list-service').removeClass('active');
 	$('#history_list_'+id+'_'+list_id).addClass('active');
-	historyGallery(id);
+	historyGallery(id, list_id);
 }
-function historyGallery(id){
+function historyGallery(id, list_id){
 	$('#history_'+id+' .history-gallery').empty();
 	$('#history_'+id+' .history-gallery').removeClass('slick-initialized slick-slider slick-dotted');
 	var image = [
@@ -155,17 +155,62 @@ function historyGallery(id){
 						image: './img/profile/history-slide.png'
 					}
 				];
+	if (!window.matchMedia('(max-width: 768px)').matches) {
+		$.each(image, function(i, v){
+			$('#history_'+id+' .history-gallery').append('<img src="'+v.image+'" />');
+		});
+		$('#history_'+id+' .history-gallery').slick({
+			slidesToShow: 1,
+		    slidesToScroll: 1,
+		    dots: true,
+		    arrows: true,
+		    infinite: true,
+		    nextArrow: $(".btn-history-next-gallery"),
+		});
+	} else {
+		
 
+	}
+	
+}
+function openHistoryM(id, list_id){
+	$('html').addClass('noScroll');
+  	$('header, section, footer').addClass('blur-filter');
+  	$('#history_view').show();
+  	$('.qcs-popup-body-img').empty();
+	$('.qcs-popup-body-img').removeClass('slick-initialized slick-slider slick-dotted');
+	var image = [
+					{
+						id: 1,
+						image: './img/profile/history-slide.png'
+					},
+					{
+						id: 2,
+						image: './img/profile/history-slide.png'
+					},
+					{
+						id: 3,
+						image: './img/profile/history-slide.png'
+					},
+					{
+						id: 4,
+						image: './img/profile/history-slide.png'
+					}
+				];
+	
 	$.each(image, function(i, v){
-		$('#history_'+id+' .history-gallery').append('<img src="'+v.image+'" />');
+		$('.qcs-popup-body-img').append('<img src="'+v.image+'" />');
 	});
-	$('#history_'+id+' .history-gallery').slick({
+	$('.qcs-popup-body-img').slick({
 		slidesToShow: 1,
 	    slidesToScroll: 1,
 	    dots: true,
-	    arrows: true,
+	    arrows: false,
 	    infinite: true,
-	    nextArrow: $(".btn-history-next-gallery"),
 	});
 }
-
+function closeHistoryM(){
+	$('html').removeClass('noScroll');
+  	$('header, section, footer').removeClass('blur-filter');
+  	$('#history_view').hide();
+}

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable = no"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>QCS</title>
     <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
@@ -165,13 +165,13 @@
           <div class="col-12 col-md-12 col-xl-11 offset-xl-1">
             <div class="row">
               <div class="col-12 col-md-3 col-xl-3 profile-box-left">
+                <h2>Profile</h2>
                 <div class="list-group" id="list-tab" role="tablist">
-                    <h2>Profile</h2>
                     <a class="list-group-item list-group-item-action" id="menu_personal" data-toggle="list" href="#personal" role="tab" aria-controls="personal">Personal Information</a>
                     <a class="list-group-item list-group-item-action" id="menu_setting" data-toggle="list" href="#setting" role="tab" aria-controls="setting">Setting Password</a>
                     <a class="list-group-item list-group-item-action" id="menu_history" data-toggle="list" href="#history" role="tab" aria-controls="history">History</a>
                     <div class="list-group-item line"></div>
-                    <a class="list-group-item list-group-item-action" href="#">Sign out</a>
+                    <a class="list-group-item list-group-item-action" href="#" id="profile_sign_out">Sign out</a>
                 </div>
               </div>
               <div class="col-12 col-md-9 col-xl-9 profile-box-right">
@@ -186,8 +186,8 @@
                               <div class="personal-detail-info">
                                 <img src="./img/home/personal.svg">
                                 <div class="box-info">
-                                  <div class="name">Alexandre Paiva</div>
-                                  <span>Tel.</span><span>096 999 9999</span>
+                                  <div class="name">Alexandre Paiva Alexandre Paiva Alexandre Paiva</div>
+                                  <div class="tel"><span>Tel.</span><span>096 999 9999</span></div>
                                 </div>
                               </div>
                               <div class="box-btn-edit">
@@ -330,47 +330,46 @@
                             <h3>History</h3>
                             <p class="profile-text">Please do not share the password with others. For the security of your own account</p>
                             <div class="row history-table-title-row">
-                              <div class="col-3 col-md-3 col-xl-3"><p>Appointment date</p></div>
-                              <div class="col-6 col-md-6 col-xl-6"><p>Service</p></div>
-                              <div class="col-3 col-md-3 col-xl-3"><p>Status</p></div>
+                              <div class="col-4 col-md-3 col-xl-3"><p>Appointment date</p></div>
+                              <div class="col-4 col-md-6 col-xl-6"><p>Service</p></div>
+                              <div class="col-4 col-md-3 col-xl-3"><p>Status</p></div>
                             </div>
                             <div class="row">
-                              <div class="col-12 col-md-12 col-xl-12">
+                              <div class="col-12 col-md-12 col-xl-12 p-0-m">
                                 <div id="history_data">
                                     <div class="card">
                                       <div class="card-header" id="head_history_1">
                                         <div class="row history-table-row collapsed" data-toggle="collapse" href="#history_1" data-target="#history_1" aria-expanded="false" aria-controls="history_1" onclick="getHistoryList(1)">
-                                          <div class="col-3 col-md-3 col-xl-3">01-01-2019</div>
-                                          <div class="col-6 col-md-6 col-xl-6">Maintenance</div>
-                                          <div class="col-3 col-md-3 col-xl-3">
+                                          <div class="col-4 col-md-3 col-xl-3">01-01-2019</div>
+                                          <div class="col-4 col-md-6 col-xl-6">Maintenance</div>
+                                          <div class="col-4 col-md-3 col-xl-3">
                                             <div class="history-status">
-                                              <img src="./img/icon/icon-circle.svg">
+                                              <img src="./img/icon/icon-circle.svg" class="status-padding">
                                               <span class="history-padding">Padding</span>
                                             </div>
                                           </div>
                                           <span class="icon-arrow"></span>
                                         </div>
                                       </div>
-
                                       <div id="history_1" class="collapse" aria-labelledby="head_history_1" data-parent="#history_data">
                                         <div class="card-body">
                                           <div class="row">
-                                            <div class="col-3 col-md-3 col-xl-3">
+                                            <div class="col-12 col-md-3 col-xl-3">
                                               <p class="history-text-title">Car information</p>
                                             </div>
-                                            <div class="col-3 col-md-3 col-xl-3">
+                                            <div class="col-6 col-md-3 col-xl-3">
                                               <p class="history-text-title">License plate</p>
                                               <p class="history-text-info">กต 9999 กรุงเทพมหานคร</p>
                                             </div>
-                                            <div class="col-2 col-md-2 col-xl-2">
+                                            <div class="col-6 col-md-2 col-xl-2">
                                               <p class="history-text-title">Brand</p>
                                               <p class="history-text-info">Porsche</p>
                                             </div>
-                                            <div class="col-2 col-md-2 col-xl-2">
+                                            <div class="col-6 col-md-2 col-xl-2">
                                               <p class="history-text-title">Model</p>
                                               <p class="history-text-info">911 Carrera S</p>
                                             </div>
-                                            <div class="col-2 col-md-2 col-xl-2">
+                                            <div class="col-6 col-md-2 col-xl-2">
                                               <p class="history-text-title">Miles</p>
                                               <p class="history-text-info">22,980 km</p>
                                             </div>
@@ -378,32 +377,56 @@
                                           <div class="row">
                                             <div class="col-12 col-md-6 col-xl-6">
                                               <div class="history-col-list-service">
-                                                <div class="history-list-service active" id="history_list_1_1" onclick="historyList(2, 1)">
+                                                <div class="history-list-service active" id="history_list_1_1" onclick="historyList(1, 1)">
                                                   <img src="./img/icon/checkbox-c.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 1</p>
-                                                    <p class="detail">Maintenance</p>
+                                                    <div>
+                                                      <p class="title active">Service 1</p>
+                                                      <p class="detail">Maintenance</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(1, 1)">
+                                                      <span>View</span>
+                                                      <img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                                 <div class="history-list-service" id="history_list_1_2" onclick="historyList(1, 2)">
                                                   <img src="./img/icon/checkbox-c.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 2</p>
-                                                    <p class="detail">Maintenance</p>
+                                                    <div>
+                                                      <p class="title active">Service 2</p>
+                                                      <p class="detail">Maintenance</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(1, 2)">
+                                                      <span>View</span>
+                                                      <img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                                 <div class="history-list-service" id="history_list_1_3" onclick="historyList(1, 3)">
-                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <img src="./img/icon/checkbox-gray.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 3</p>
-                                                    <p class="detail">Maintenance</p>
+                                                    <div>
+                                                      <p class="title">Service 3</p>
+                                                      <p class="detail">Maintenance</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(1, 3)">
+                                                      <span>View</span>
+                                                      <img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                                 <div class="history-list-service" id="history_list_1_4" onclick="historyList(1, 4)">
-                                                  <img src="./img/icon/checkbox-c.png">
+                                                  <img src="./img/icon/checkbox-gray.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 4</p>
-                                                    <p class="detail">Maintenance</p>
+                                                    <div>
+                                                      <p class="title">Service 1</p>
+                                                      <p class="detail">Maintenance</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(1, 4)">
+                                                      <span>View</span>
+                                                      <img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                               </div>
@@ -421,37 +444,36 @@
                                     <div class="card">
                                       <div class="card-header" id="head_history_2">
                                         <div class="row history-table-row collapsed" data-toggle="collapse" href="#history_2"  data-target="#history_2" aria-expanded="false" aria-controls="history_2" onclick="getHistoryList(2)">
-                                          <div class="col-3 col-md-3 col-xl-3">01-08-2019</div>
-                                          <div class="col-6 col-md-6 col-xl-6">Issue</div>
-                                          <div class="col-3 col-md-3 col-xl-3">
+                                          <div class="col-4 col-md-3 col-xl-3">01-08-2019</div>
+                                          <div class="col-4 col-md-6 col-xl-6">Issue</div>
+                                          <div class="col-4 col-md-3 col-xl-3">
                                             <div class="history-status">
-                                              <img src="./img/icon/icon-check.svg">
+                                              <img src="./img/icon/icon-check.svg" class="status-success">
                                               <span class="history-success">Success</span>
                                             </div>
                                           </div>
                                           <span class="icon-arrow"></span>
                                         </div>
                                       </div>
-
                                       <div id="history_2" class="collapse" aria-labelledby="head_history_2" data-parent="#history_data">
                                         <div class="card-body">
                                           <div class="row">
-                                            <div class="col-3 col-md-3 col-xl-3">
+                                            <div class="col-12 col-md-3 col-xl-3">
                                               <p class="history-text-title">Car information</p>
                                             </div>
-                                            <div class="col-3 col-md-3 col-xl-3">
+                                            <div class="col-6 col-md-3 col-xl-3">
                                               <p class="history-text-title">License plate</p>
                                               <p class="history-text-info">กต 9999 กรุงเทพมหานคร</p>
                                             </div>
-                                            <div class="col-2 col-md-2 col-xl-2">
+                                            <div class="col-6 col-md-2 col-xl-2">
                                               <p class="history-text-title">Brand</p>
                                               <p class="history-text-info">Porsche</p>
                                             </div>
-                                            <div class="col-2 col-md-2 col-xl-2">
+                                            <div class="col-6 col-md-2 col-xl-2">
                                               <p class="history-text-title">Model</p>
                                               <p class="history-text-info">911 Carrera S</p>
                                             </div>
-                                            <div class="col-2 col-md-2 col-xl-2">
+                                            <div class="col-6 col-md-2 col-xl-2">
                                               <p class="history-text-title">Miles</p>
                                               <p class="history-text-info">22,980 km</p>
                                             </div>
@@ -462,29 +484,53 @@
                                                 <div class="history-list-service active" id="history_list_2_1" onclick="historyList(2, 1)">
                                                   <img src="./img/icon/checkbox-c.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 1</p>
-                                                    <p class="detail">Issue</p>
+                                                    <div>
+                                                      <p class="title active">Service 1</p>
+                                                      <p class="detail">Issue</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(2, 1)">
+                                                      <span>View</span>
+                                                      <img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                                 <div class="history-list-service" id="history_list_2_2" onclick="historyList(2, 2)">
                                                   <img src="./img/icon/checkbox-c.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 2</p>
-                                                    <p class="detail">Issue</p>
+                                                    <div>
+                                                      <p class="title active">Service 2</p>
+                                                      <p class="detail">Issue</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(2, 2)">
+                                                      <span>View</span>
+                                                      <img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                                 <div class="history-list-service" id="history_list_2_3" onclick="historyList(2, 3)">
                                                   <img src="./img/icon/checkbox-c.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 3</p>
-                                                    <p class="detail">Issue</p>
+                                                    <div>
+                                                      <p class="title active">Service 3</p>
+                                                      <p class="detail">Issue</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(2, 3)">
+                                                      <span>View</span>
+                                                      <img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                                 <div class="history-list-service" id="history_list_2_4" onclick="historyList(2, 4)">
                                                   <img src="./img/icon/checkbox-c.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 4</p>
-                                                    <p class="detail">Issue</p>
+                                                    <div>
+                                                      <p class="title active">Service 4</p>
+                                                      <p class="detail">Issue</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(2, 4)">
+                                                      <span>View</span>
+                                                      <img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                               </div>
@@ -502,11 +548,11 @@
                                     <div class="card">
                                       <div class="card-header" id="head_history_3">
                                         <div class="row history-table-row collapsed" data-toggle="collapse" href="#history_3"  data-target="#history_3" aria-expanded="false" aria-controls="history_3" onclick="getHistoryList(3)">
-                                          <div class="col-3 col-md-3 col-xl-3">01-08-2019</div>
-                                          <div class="col-6 col-md-6 col-xl-6">Issue</div>
-                                          <div class="col-3 col-md-3 col-xl-3">
+                                          <div class="col-4 col-md-3 col-xl-3">01-08-2019</div>
+                                          <div class="col-4 col-md-6 col-xl-6">Issue</div>
+                                          <div class="col-4 col-md-3 col-xl-3">
                                             <div class="history-status">
-                                              <img src="./img/icon/icon-check.svg">
+                                              <img src="./img/icon/icon-check.svg" class="status-success">
                                               <span class="history-success">Success</span>
                                             </div>
                                           </div>
@@ -516,22 +562,22 @@
                                       <div id="history_3" class="collapse" aria-labelledby="head_history_3" data-parent="#history_data">
                                         <div class="card-body">
                                           <div class="row">
-                                            <div class="col-3 col-md-3 col-xl-3">
+                                            <div class="col-12 col-md-3 col-xl-3">
                                               <p class="history-text-title">Car information</p>
                                             </div>
-                                            <div class="col-3 col-md-3 col-xl-3">
+                                            <div class="col-6 col-md-3 col-xl-3">
                                               <p class="history-text-title">License plate</p>
                                               <p class="history-text-info">กต 9999 กรุงเทพมหานคร</p>
                                             </div>
-                                            <div class="col-2 col-md-2 col-xl-2">
+                                            <div class="col-6 col-md-2 col-xl-2">
                                               <p class="history-text-title">Brand</p>
                                               <p class="history-text-info">Porsche</p>
                                             </div>
-                                            <div class="col-2 col-md-2 col-xl-2">
+                                            <div class="col-6 col-md-2 col-xl-2">
                                               <p class="history-text-title">Model</p>
                                               <p class="history-text-info">911 Carrera S</p>
                                             </div>
-                                            <div class="col-2 col-md-2 col-xl-2">
+                                            <div class="col-6 col-md-2 col-xl-2">
                                               <p class="history-text-title">Miles</p>
                                               <p class="history-text-info">22,980 km</p>
                                             </div>
@@ -542,29 +588,52 @@
                                                 <div class="history-list-service active" id="history_list_3_1" onclick="historyList(3, 1)">
                                                   <img src="./img/icon/checkbox-c.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 1</p>
-                                                    <p class="detail">Issue</p>
+                                                    <div>
+                                                      <p class="title active">Service 1</p>
+                                                      <p class="detail">Issue</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(3, 1)">
+                                                      <span>View</span>
+                                                      <img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                                 <div class="history-list-service" id="history_list_3_2" onclick="historyList(3, 2)">
                                                   <img src="./img/icon/checkbox-c.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 2</p>
-                                                    <p class="detail">Issue</p>
+                                                    <div>
+                                                      <p class="title active">Service 2</p>
+                                                      <p class="detail">Issue</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(3, 2)">
+                                                      <span>View</span>
+                                                      <img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                                 <div class="history-list-service" id="history_list_3_3" onclick="historyList(3, 3)">
                                                   <img src="./img/icon/checkbox-c.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 3</p>
-                                                    <p class="detail">Issue</p>
+                                                    <div>
+                                                      <p class="title active">Service 3</p>
+                                                      <p class="detail">Issue</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(3, 3)">
+                                                      <span>View</span>
+                                                      <img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                                 <div class="history-list-service" id="history_list_3_4" onclick="historyList(3, 4)">
                                                   <img src="./img/icon/checkbox-c.png">
                                                   <div class="box-text">
-                                                    <p class="title">Service 4</p>
-                                                    <p class="detail">Issue</p>
+                                                    <div>
+                                                      <p class="title active">Service 4</p>
+                                                      <p class="detail">Issue</p>
+                                                    </div>
+                                                    <div class="box-link-view-service" onclick="openHistoryM(3, 4)">
+                                                      <span>View</span><img src="./img/icon/icon-view.svg">
+                                                    </div>
                                                   </div>
                                                 </div>
                                               </div>
@@ -593,6 +662,17 @@
         
       </div>
     </section>
+
+    <div class="qcs-popup-img" id="history_view">
+      <div class="qcs-popup-bg-img">
+        <!-- Close -->
+        <div class="qcs-popup-close-img">
+          <button type="button" class="btn-close-popup-img" onclick="closeHistoryM()"><img src="./img/icon/icon-close-w.svg"></button>
+        </div>
+        <!-- Body -->
+        <div class="qcs-popup-body-img"></div>
+      </div>
+    </div>
 
     <footer>
       <div class="qcs-footer">
@@ -650,10 +730,11 @@
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/js.js"></script>
-    <!-- Page prfile -->
+    <!-- Page profile -->
     <link rel="stylesheet" type="text/css" href="./css/selectize.css">
     <link rel="stylesheet" type="text/css" href="./css/profile.css">
     <script type="text/javascript" src="./js/selectize.min.js"></script>
     <script type="text/javascript" src="./js/profile.js"></script>
+
   </body>
 </html>

@@ -686,6 +686,7 @@ a:hover .card-our-service{
   position: relative;
   color: #ffffff;
   margin: 10px 0;
+  border: none;
 }
 .btn-facebook img{
   position: absolute;
@@ -810,6 +811,39 @@ a:hover .card-our-service{
   .qcs-text-title{margin: 0;font-size: 18px;-webkit-line-clamp: 3;}
   #news.qcs-section, #promotion.qcs-section{padding: 60px 15px;}
   .qcs-card-list-img{padding: 0 0 0 15px;}
+  .qcs-slide-arrow-left, .qcs-slide-arrow-right{display: none;}
+  .qcs-slide-box-arrow{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    height: auto;
+    width: auto;
+    padding: 0 5px;
+    bottom: 0;
+    left: 0;
+    right: inherit;
+  }
+  #news_detail_slide .slick-dots li button:before{
+    width: 15px;
+    height: 3px;
+    background-color: #000000;
+    content: "";
+    margin: 0
+  }
+  #news_detail_slide .slick-dots li{margin: 0;}
+  #news_detail_slide .slick-dotted.slick-slider{margin-bottom: 0;}
+  #news_detail_slide .slick-dots{bottom: -40px;}
+  #promotion_detail_slide .slick-dots li button:before{
+    width: 15px;
+    height: 3px;
+    background-color: #000000;
+    content: "";
+    margin: 0
+  }
+  #promotion_detail_slide .slick-dots li{margin: 0;}
+  #promotion_detail_slide .slick-dotted.slick-slider{margin-bottom: 0;}
+  #promotion_detail_slide .slick-dots{bottom: -40px;}
+  .qcs-detail-box-content{padding: 20px 0;}
+  .slide-count-wrapP{font-size: 13px;}
 
   /*Nav*/
   header{
