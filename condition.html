@@ -130,7 +130,7 @@
         </div> 
         <a class="qcs-link-menu-m" href="./about-us.html">About us</a>
         <div class="qcs-link-menu-m" id="menu_our_service">
-            <div class="box-menu" data-toggle="collapse" data-target="#menu_show" aria-expanded="true" aria-controls="menu_show">
+            <div class="box-menu collapsed" data-toggle="collapse" data-target="#menu_show" aria-expanded="true" aria-controls="menu_show">
                 <span>Our service</span>
                 <span class="icon"></span>
             </div>
@@ -160,7 +160,7 @@
       </div>
     </div>
     <section class="qcs-section-all-header" id="condition_header">
-      <img src="./img/service/bg-decorate.png" class="w-100">
+      <img src="./img/service/bg-decorate.png" class="img-header-show">
       <div class="qcs-header-all-overlay"></div>
       <div class="qcs-header-all-box">
         <div class="container">
@@ -206,7 +206,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-xl-6">
+          <div class="col-12 col-md-6 col-xl-6 p-0-m">
             <img src="./img/service/img-decorate.png" class="w-100">
           </div>
         </div>
@@ -220,14 +220,29 @@
       </div>
       <div class="container service-gallery-container">
         <div class="row service-gallery-slide" id="condition_gallery_slide">
-          <div class="col-12 col-md-12 col-xl-12"><img src="./img/service/image-decorate-1.png" class="w-100"></div>
-          <div class="col-12 col-md-12 col-xl-12"><img src="./img/service/image-decorate-2.png" class="w-100"></div>
-          <div class="col-12 col-md-12 col-xl-12"><img src="./img/service/image-decorate-3.png" class="w-100"></div>
-          <div class="col-12 col-md-12 col-xl-12"><img src="./img/service/image-decorate-4.png" class="w-100"></div>
+          <div class="col-12 col-md-12 col-xl-12"><img src="./img/service/image-decorate-1.png" class="w-100" onclick="showServiceImg()"></div>
+          <div class="col-12 col-md-12 col-xl-12"><img src="./img/service/image-decorate-2.png" class="w-100" onclick="showServiceImg()"></div>
+          <div class="col-12 col-md-12 col-xl-12"><img src="./img/service/image-decorate-3.png" class="w-100" onclick="showServiceImg()"></div>
+          <div class="col-12 col-md-12 col-xl-12"><img src="./img/service/image-decorate-4.png" class="w-100" onclick="showServiceImg()"></div>
         </div>
         <button type="button" class="service-gallery-slide-next"><img src="./img/icon/icon-right.svg"></button>
       </div>
     </section>
+    <div class="qcs-popup-service-img">
+      <div class="qcs-popup-bg-service-img">
+        <!-- Close -->
+        <div class="qcs-popup-close-service-img">
+          <button type="button" class="btn-close-popup-service-img" onclick="closeServiceImg()"><img src="./img/icon/icon-close-w.svg"></button>
+        </div>
+        <!-- Body -->
+        <div class="qcs-popup-body-service-img">
+          <img src="./img/service/image-decorate-1.png" class="w-100">
+          <img src="./img/service/image-decorate-2.png" class="w-100">
+          <img src="./img/service/image-decorate-3.png" class="w-100">
+          <img src="./img/service/image-decorate-4.png" class="w-100">
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="qcs-footer">
         <div class="container">
@@ -284,6 +299,7 @@
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/js.js"></script>
+    <!-- IN page -->
     <link href="./css/service.css" rel="stylesheet" />
     <script type="text/javascript" src="./js/service.js"></script>
   </body>

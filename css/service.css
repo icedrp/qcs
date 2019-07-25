@@ -50,3 +50,67 @@
     position: relative;
 }
 .service-content-left{padding-top: 120px;}
+.slick-lightbox-close:before{font-size: 40px;}
+.slick-next.slick-arrow, .slick-prev.slick-arrow{display: none!important;}
+
+/* Popup */
+.qcs-popup-service-img{
+  background-color: rgba(0,0,0,0.74);
+  height: 100vh;
+  position: fixed;
+  z-index: 1060;
+  width: 100%;
+  top: 0;
+  display: none;
+}
+.qcs-popup-bg-service-img {
+  position: relative;
+}
+.qcs-popup-close-service-img {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-radius: 4px;
+  z-index: 1061;
+  text-align: right;
+}
+.btn-close-popup-service-img{border: none;background-color: transparent;padding: 25px;}
+.btn-close-popup-service-img:focus{outline: none;}
+.qcs-popup-body-service-img{
+  text-align: center;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1061;
+}
+.qcs-popup-body-service-img .slick-dots li.slick-active button:before{background-color: #F7B300;}
+.qcs-popup-body-service-img .slick-dots li button:before{
+  width: 28px;
+  height: 3px;
+  background-color: #FFFFFF;
+  content: "";
+  margin: 0;
+  opacity: 1;
+}
+.qcs-popup-body-service-img .slick-dots{bottom: -50px;}
+.qcs-popup-body-service-img .slick-dots li{margin: 0 8px;}
+.qcs-popup-body-service-img .slick-slide{padding: 0 15vw;margin-left: -1vw;}
+.qcs-popup-body-service-img .slick-list{padding: 0px 20vw 0 0 !important;margin-left: 20vw;}
+
+@media (min-width: 320px) and (max-width: 767px){
+  .service-content{margin-top: 0;}
+  .service-content-left{padding-top: 26px;}
+  .service-list > .box-number{width: 60px;height: 60px;margin-right: 20px;}
+  .service-list > .box-content{width: calc(100% - 80px);}
+  .service-list{padding: 15px 0;}
+  .service-gallery-slide .slick-list{padding: 0px 40px 0 0 !important;}
+  .service-gallery-slide-next{display: none;}
+  .service-gallery{padding-bottom: 60px;}
+  .qcs-popup-body-service-img .slick-slide{padding: 0 5vw;margin-left: -1vw;}
+  .qcs-popup-body-service-img .slick-list{padding: 0px 10vw 0 0 !important;margin-left: 10vw;}
+
+}

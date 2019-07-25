@@ -5,11 +5,13 @@ $(document).ready(function() {
 	    dots: true,
 	    arrows: true,
 	    infinite: true,
-	    autoplay: true,
+	    autoplay: false,
 	    autoplaySpeed: 3000,
 	    centerMode: true,
 	    centerPadding: "120px",
 	    nextArrow: $(".service-gallery-slide-next"),
+	    asNavFor: '.qcs-popup-body-service-img',
+	    focusOnSelect: true,
 	    responsive: [
 	      {
 	        breakpoint: 1024,
@@ -25,10 +27,30 @@ $(document).ready(function() {
 	        settings: {
 	          arrows: false,
 	          centerMode: true,
-	          centerPadding: "60px",
+	          centerPadding: "40px",
 	          slidesToShow: 2
 	        }
 	      }
 	    ]
-	  });
+	});
+ 	$('.qcs-popup-body-service-img').slick({
+		slidesToShow: 1,
+	  	slidesToScroll: 1,
+	  	infinite: true,
+	  	centerMode: true,
+      	centerPadding: "20vw",
+      	autoplay: false,
+	  	asNavFor: '.service-gallery-slide'
+	});
 });
+
+function showServiceImg(){
+	$('.qcs-popup-service-img').show();
+	$('html').addClass('noScroll');
+  	$('header, section, footer').addClass('blur-filter');
+}
+function closeServiceImg(){
+	$('.qcs-popup-service-img').hide();
+	$('html').removeClass('noScroll');
+  	$('header, section, footer').removeClass('blur-filter');
+}

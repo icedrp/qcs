@@ -13,6 +13,9 @@
 .car-card-title > .box-info{font-size: 18px;}
 .car-card-price{font-size: 32px;font-family: 'PragatiNarrow-Bold';margin: 30px 0;}
 .car-card-link{display: flex;justify-content: space-between;align-items: center;}
+.img-car-all{width: 100%;}
+.img-car-logo-all{width: 65px;height: 65px;object-fit: cover;object-position: center;}
+.car-card-title > .box-info .car-model{padding-right: 5px;}
 
 /* Car detail */
 .car-detail-header-name{display: flex;align-items: center;justify-content: center;}
@@ -45,6 +48,7 @@
 .car-detail-contact{padding: 30px 0 0;}
 .car-detail-contact span{font-size: 18px;font-family: 'PragatiNarrow-Bold';margin: 0 7.5px 0 0;}
 .car-detail-contact img{width: 43px;height: 43px;margin: 0 7.5px;}
+.car-detail-title-right .price span{padding-left: 5px;}
 
 /* Car detail info */
 .car-detail-info{padding: 60px;}
@@ -55,12 +59,73 @@
 .car-detail-info-color{width: 25px;height: 25px;border-radius: 50%;}
 #car_detail_vehicle .car-detail-info-list{display: block;}
 #car_detail_vehicle .car-detail-info-list-data{text-align: left;}
-
-
-
+.car-detail-info-box{display: flex;justify-content: space-between;}
+.down-equipment, .up-equipment, .down-spec, .up-spec{display: none;}
 
 /* Car detail info color */
 .bg-blue{background-color: #1F62E0;}
+
+@media (min-width: 320px) and (max-width: 767px){
+    #page_car{padding: 90px 0 60px;}
+    .car-row-filter{padding: 30px 0;}
+    .selectize-control.single .selectize-input{margin: 5px 0;}
+    .btn-car-search{width: 50%;margin-top: 10px;}
+    .car-select-sort-by.selectize-control.single .selectize-input:after{right: 5px;}
+    .img-car-logo-all{width:100%;max-width: 22px;height: 22px;}
+    .car-card-title > .name{
+        font-size: 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        max-width: calc(100% - 22px);
+        overflow: hidden;
+    }
+    .car-card-box-detail{padding-left: 0;}
+    .car-card-price{font-size: 16px;margin: 0;}
+    .car-card-title > .box-info{font-size: 10px;margin-top: 5px;margin-left: -37px;}
+    .btn-home-more.car-more{background-color: transparent;color: #F7B300;padding: 0;width:auto;height: auto;font-size: 14px;}
+    .btn-home-more.car-more img{margin-left: 8px;}
+    .qcs-btn-share span{font-size: 12px;margin-right: 7.5px;}
+    .car-card-row{padding: 15px 0;}
+
+    /* Car detail */
+    .car-detail-list-group .list-group-item{margin: 0;}
+    .car-detail-list-group .list-group-item.active{
+        background-color: transparent;
+        color: #F7B300;
+        border-color: #ffffff;
+        border-bottom: 2px solid #F7B300;
+    }
+    .qcs-slide-in-arrow-left, .qcs-slide-in-arrow-right,
+    .qcs-slide-arrow-left, .qcs-slide-arrow-right{display: none!important;}
+    .car-detail-header-name img{margin: 0 10px;}
+    .car-detail-header-name h2{font-size: 32px;text-align: center;}
+    .car-detail-header-name{padding: 26px 0 16px;justify-content: space-between;}
+    #car_detail_slide_ex .slick-dots li button:before,
+    #car_detail_slide_in .slick-dots li button:before{
+        width: 15px;
+        height: 3px;
+        background-color: #000000;
+        content: "";
+        margin: 0
+    }
+    #car_detail_slide_ex .slick-dots li, #car_detail_slide_in .slick-dots li{margin: 0;}
+    #car_detail_slide_ex .slick-dotted.slick-slider, #car_detail_slide_in .slick-dotted.slick-slider{margin-bottom: 0;}
+    #car_detail_slide_ex .slick-dots, #car_detail_slide_in .slick-dots{bottom: -40px;}
+    .car-detail-box-title{display: block;padding: 30px 0 0;}
+    .car-detail-title-left{display: block;text-align: center;}
+    .car-detail-title-left > img{width:100%;max-width: 66px;height: 66px;margin-right:0;margin-bottom: 10px;}
+    .car-detail-title-right .price{text-align: center;font-size: 28px;padding: 10px 0;}
+    .car-detail-name > .box-info{font-size: 12px;}
+    .car-detail-name > .name{font-size: 24px;}
+    .car-detail-contact{display: block;text-align: center;padding-top: 0;}
+    .car-detail-contact .box-icon{padding-top: 10px;}
+    .car-detail-info{padding: 15px 30px;}
+    .qcs-toggle{display: none;}
+    .car-detail-info h3{margin: 0;}
+    .up-equipment, .up-spec{display: block;}
+}
+
 
 
 
