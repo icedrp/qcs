@@ -40,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/book" class="qcs-header-book">Book Service<img src="./img/icon/icon-right-2.svg"/></a>
+            <a href="./booking.html" class="qcs-header-book">Book Service<img src="./img/icon/icon-right-2.svg"/></a>
             <div class="qcs-header-box-logo"><a href="./"><img src="./img/logo.png" /></a></div>
             <div class="qcs-header-box-lang">
               <div class="qcs-header-box-sigin qcs-hide">
@@ -162,11 +162,11 @@
     <section class="qcs-section" id="booking">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-6 col-xl-6">
-            <img src="./img/car/bg-book.png" class="w-100">
+          <div class="col-12 col-md-6 col-xl-6 p-0-m">
+            <img src="./img/car/bg-book.png" class="img-header-booking">
           </div>
           <div class="col-12 col-md-6 col-xl-5">
-            <form>
+            <form class="booking-form-booking">
               <div class="row">
                 <div class="col-12 col-md-12 col-xl-12"><h4>Service Appointment</h4></div>
                 <div class="col-12 col-md-12 col-xl-12">
@@ -182,6 +182,32 @@
                 <div class="col-12 col-md-12 col-xl-12">
                   <input type="date" id="date_service" name="date_service" class="form-control qcs-date-input" placeholder="Date of service" required>
                   <div class="input-error" id="date_service_req">Please select Date of service.</div>
+                </div>
+                <div class="col-12 col-md-12 col-xl-12">
+                  <p class="label-title-booking">เลือกช่วงเวลา</p>
+                  <div class="booking-box-duration">
+                    <label>
+                        <input type="radio" name="duration" id="duration" class="input-duration" value="1" checked="">
+                        <div class="box-select">
+                            <img src="./img/icon/icon-check-circle.svg" class="check">
+                            <p class="text">ทุกเวลา</p>
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="duration" id="duration" class="input-duration" value="2">
+                        <div class="box-select">
+                            <img src="./img/icon/icon-check-circle.svg" class="check">
+                            <p class="text">ช่วงเช้า</p>
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="duration" id="duration" class="input-duration" value="2">
+                        <div class="box-select">
+                            <img src="./img/icon/icon-check-circle.svg" class="check">
+                            <p class="text">ช่วงบ่าย</p>
+                        </div>
+                    </label>
+                  </div>
                 </div>
                 <div class="col-12 col-md-12 col-xl-12">
                   <textarea class="form-control" id="detail" name="detail" rows="3" placeholder="Detail"></textarea>
@@ -243,7 +269,7 @@
                   </div>
                   <div class="input-error" id="miles_req">Please enter Miles.</div>
                 </div>
-                <div class="col-12 col-md-12 col-xl-12">
+                <div class="col-12 col-md-12 col-xl-12 qcs-flex-center-m">
                   <button type="button" class="btn-qcs btn-booking-confirm" onclick="gotoDetailBooking()">Confirm<img src="./img/icon/icon-right-2-b.svg"></button>
                 </div>
               </div>
@@ -269,22 +295,22 @@
             </div>
             <div class="choosing-detail-booking">
               <div class="row">
-                <div class="col-3 col-md-3 col-xl-3">
+                <div class="col-12 col-md-3 col-xl-3">
                   <h4>Car information</h4>
                 </div>
-                <div class="col-3 col-md-3 col-xl-3">
+                <div class="col-12 col-md-3 col-xl-3">
                   <p class="choosing-title">License plate</p>
                   <p class="choosing-info" id="show_license_plate">กด 9999 กรุงเทพมหานคร</p>
                 </div>
-                <div class="col-2 col-md-2 col-xl-2">
+                <div class="col-6 col-md-2 col-xl-2">
                   <p class="choosing-title">Brand</p>
                   <p class="choosing-info" id="show_brand">Porsche</p>
                 </div>
-                <div class="col-2 col-md-2 col-xl-2">
+                <div class="col-6 col-md-2 col-xl-2">
                   <p class="choosing-title">Model</p>
                   <p class="choosing-info" id="show_model">911 Carrera S</p>
                 </div>
-                <div class="col-2 col-md-2 col-xl-2">
+                <div class="col-6 col-md-2 col-xl-2">
                   <p class="choosing-title">Miles</p>
                   <p class="choosing-info"><span id="show_miles">33,980</span><span>km</span></p>
                 </div>
@@ -292,21 +318,25 @@
             </div>
             <div class="choosing-detail-booking">
               <div class="row">
-                <div class="col-3 col-md-3 col-xl-3">
+                <div class="col-12 col-md-3 col-xl-3">
                   <h4>Service</h4>
                 </div>
-                <div class="col-9 col-md-9 col-xl-9">
+                <div class="col-12 col-md-3 col-xl-3">
                   <p class="choosing-title">Type Service</p>
                   <p class="choosing-info" id="show_service">Maintenance</p>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6">
+                  <p class="choosing-title">Detail</p>
+                  <p class="choosing-info" id="show_detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis id tellus vitae convallis.</p>
                 </div>
               </div>
             </div>
             <div class="choosing-detail-booking">
               <div class="row">
-                <div class="col-3 col-md-3 col-xl-3">
+                <div class="col-12 col-md-3 col-xl-3">
                   <h4>Appointment date</h4>
                 </div>
-                <div class="col-9 col-md-9 col-xl-9">
+                <div class="col-12 col-md-9 col-xl-9">
                   <p class="choosing-title">Date of service</p>
                   <p class="choosing-info" id="show_service">01-01-2019</p>
                 </div>
@@ -339,8 +369,8 @@
     <footer>
       <div class="qcs-footer">
         <div class="container">
-          <div class="row">
-            <div class="col-5 col-md-2 col-xl-2">
+          <div class="row justify-content-center">
+            <div class="col-5 col-md-3 col-xl-2">
               <ul class="list-unstyled qcs-footer-link">
                 <li><a href="./about-us.html">About us</a></li>
                 <li><a>Our service</a></li>
@@ -350,19 +380,19 @@
                 <li><a href="./onsite.html" class="disable">Onsite service</a></li>
               </ul>
             </div>
-            <div class="col-4 col-md-2 col-xl-2">
+            <div class="col-4 col-md-3 col-xl-2">
               <ul class="list-unstyled qcs-footer-link">
                 <li><a href="./car.html" class="active">Used Car</a></li>
                 <li><a href="./promotion.html">Promotion</a></li>
               </ul>
             </div>
-            <div class="col-3 col-md-2 col-xl-3">
+            <div class="col-3 col-md-3 col-xl-3">
               <ul class="list-unstyled qcs-footer-link">
                 <li><a href="./news.html">News</a></li>
                 <li><a href="./contact-us.html">Contact Us</a></li>
               </ul>
             </div>
-            <div class="col-12 col-md-6 col-xl-5">
+            <div class="col-12 col-md-8 col-xl-5">
               <div class="qcs-footer-right">
                 <form class="form-subscribe">
                   <input type="email" name="subscribe" id="subscribe" class="input-subscribe" placeholder="Enter your email">

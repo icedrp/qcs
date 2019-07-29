@@ -40,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/book" class="qcs-header-book">Book Service<img src="./img/icon/icon-right-2.svg"/></a>
+            <a href="./booking.html" class="qcs-header-book">Book Service<img src="./img/icon/icon-right-2.svg"/></a>
             <div class="qcs-header-box-logo"><a href="./"><img src="./img/logo.png" /></a></div>
             <div class="qcs-header-box-lang">
               <div class="qcs-header-box-sigin">
@@ -165,7 +165,7 @@
       <div class="qcs-popup-bg">
         <!-- Header -->
         <div class="qcs-popup-header">
-          <button type="button" class="btn-close-popup" onclick="closePopup()"><img src="./img/icon/icon-close.svg"></button>
+          <button type="button" class="btn-close-popup" onclick="closeSign()"><img src="./img/icon/icon-close.svg"></button>
         </div>
         <!-- Body -->
         <div class="qcs-popup-body">
@@ -186,7 +186,7 @@
               <input type="password" name="login_password" id="login_password" class="qcs-popup-input" required="true" />
               <label for="login_password"><span>Password</span></label>
             </div>
-            <a href="./forgot-password.html" class="qcs-forgot-password">Forgot Your Password ?</a>
+            <div class="qcs-forgot-password" onclick="openForget()">Forgot Your Password ?</div>
             <button type="submit" class="btn-confirm-popup">Sign in</button>
             <p class="qcs-link-open">Don't have an account? <span onclick="openSignup()">Sign up</span></p>
           </form>
@@ -214,6 +214,27 @@
         </div>
       </div>
     </div>
+    <!-- Forget Password -->
+    <div class="qcs-popup" id="popup_forget">
+      <div class="qcs-popup-bg">
+        <!-- Header -->
+        <div class="qcs-popup-header">
+          <button type="button" class="btn-close-popup" onclick="closeForget()"><img src="./img/icon/icon-close.svg"></button>
+        </div>
+        <!-- Body -->
+        <div class="qcs-popup-body">
+          <h2>Forget Your Password?</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipi</p>
+          <form>
+            <div class="qcs-field">
+              <input type="email" name="forget_email" id="forget_email" class="qcs-popup-input" required="true" />
+              <label for="forget_email"><span>Email Address</span></label>
+            </div>
+            <button type="submit" class="btn-confirm-popup">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- Content -->
     <section id="home_slide">
       <div class="qcs-slide">
@@ -231,7 +252,7 @@
                       <h1>Service Appointment</h1>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mattis augue. Morbi sem tortor, malesuada vitae diam eget, ornare posuere nisl. Mauris pretium id ligula a tempor.</p>
 
-                      <a href="/book" class="qcs-slide-btn">Book now <img src="./img/icon/icon-right-2-b.svg"></a>
+                      <a href="./booking.html" class="qcs-slide-btn">Book now <img src="./img/icon/icon-right-2-b.svg"></a>
                     </div>
                   </div>
                 </div>
@@ -255,10 +276,10 @@
         <div class="row">
           <div class="col-12 col-md-12 col-xl-12">
             <div class="row home-our-service-row">
-              <div class="col-12 col-md-6 col-xl-6 home-our-service-p">
-                  <a href="#"><div class="card-our-service">
+              <div class="col-12 col-md-12 col-xl-6 home-our-service-p">
+                  <a href="./condition.html"><div class="card-our-service">
                     <div class="card-our-service-img">
-                      <img src="./img/home/our-service/image-1.png">
+                      <img src="./img/home/our-service/image-1.png" class="img-home-our-service">
                     </div>
                     <div class="card-our-service-content">
                       <div class="card-our-service-content-body">
@@ -272,9 +293,9 @@
                   </div></a>
               </div>
               <div class="col-12 col-md-6 col-xl-6 home-our-service-p">
-                <a href="#"><div class="card-our-service">
+                <a href="./maintenance.html"><div class="card-our-service">
                   <div class="card-our-service-img">
-                    <img src="./img/home/our-service/image-2.png">
+                    <img src="./img/home/our-service/image-2.png" class="img-home-our-service tablet">
                   </div>
                   <div class="card-our-service-content">
                     <div class="card-our-service-content-body">
@@ -287,10 +308,10 @@
                   </div>
                 </div></a>
               </div>
-              <div class="col-12 col-md-4 col-xl-4 home-our-service-p">
-                  <a href="#"><div class="card-our-service">
+              <div class="col-12 col-md-6 col-xl-4 home-our-service-p">
+                  <a href="./decorate.html"><div class="card-our-service">
                     <div class="card-our-service-img">
-                      <img src="./img/home/our-service/image-3.png">
+                      <img src="./img/home/our-service/image-3.png" class="img-home-our-service tablet">
                     </div>
                     <div class="card-our-service-content">
                       <div class="card-our-service-content-body">
@@ -303,10 +324,10 @@
                     </div>
                   </div></a>
               </div>
-              <div class="col-12 col-md-4 col-xl-4 home-our-service-p">
-                <a href="#"><div class="card-our-service">
+              <div class="col-12 col-md-6 col-xl-4 home-our-service-p">
+                <a href="./outsite.html"><div class="card-our-service">
                   <div class="card-our-service-img">
-                    <img src="./img/home/our-service/image-4.png">
+                    <img src="./img/home/our-service/image-4.png" class="img-home-our-service tablet">
                   </div>
                   <div class="card-our-service-content">
                     <div class="card-our-service-content-body">
@@ -319,10 +340,10 @@
                   </div>
                 </div></a>
               </div>
-              <div class="col-12 col-md-4 col-xl-4 home-our-service-p">
+              <div class="col-12 col-md-6 col-xl-4 home-our-service-p">
                 <a href="#"><div class="card-our-service">
                   <div class="card-our-service-img">
-                    <img src="./img/home/our-service/image-5.png">
+                    <img src="./img/home/our-service/image-5.png" class="img-home-our-service tablet">
                   </div>
                   <div class="card-our-service-content">
                     <div class="card-our-service-content-body">
@@ -344,7 +365,7 @@
       <div class="container">
         <h1 class="home-h1">Promotion Service <a href="./promotion.html" class="btn-home-more-m">Discover more<img src="./img/icon/icon-right-2-c.svg"></a></h1>
         <div class="row" id="home_promotion_service_slide">
-          <div class="col-12 col-md-4 col-xl-4 slick-slide-p-m">
+          <div class="col-12 col-md-12 col-xl-4 slick-slide-p-m">
             <a href="#"><div class="crad-promotion-service">
               <img src="./img/home/promotion-service/image-1.png" class="img-home-promotion-service">
               <div class="home-promotion-service-content">
@@ -357,7 +378,7 @@
               </div>
             </div></a>
           </div>
-          <div class="col-12 col-md-4 col-xl-4 slick-slide-p-m">
+          <div class="col-12 col-md-12 col-xl-4 slick-slide-p-m">
             <a href="#"><div class="crad-promotion-service">
               <img src="./img/home/promotion-service/image-2.png" class="img-home-promotion-service">
               <div class="home-promotion-service-content">
@@ -370,7 +391,7 @@
               </div>
             </div></a>
           </div>
-          <div class="col-12 col-md-4 col-xl-4 slick-slide-p-m">
+          <div class="col-12 col-md-12 col-xl-4 slick-slide-p-m">
             <a href="#"><div class="crad-promotion-service">
               <img src="./img/home/promotion-service/image-3.png" class="img-home-promotion-service">
               <div class="home-promotion-service-content">
@@ -397,7 +418,7 @@
       <div class="container">
         <h1 class="home-h1">Our News <a href="./news.html" class="btn-home-more-m">Discover more<img src="./img/icon/icon-right-2-c.svg"></a></h1>
         <div class="row">
-          <div class="col-12 col-md-6 col-xl-6">
+          <div class="col-12 col-md-12 col-xl-6">
             <a href="./new-detail.html"><div class="crad-our-news">
               <img src="./img/home/our-news/image-1.png" class="w-100">
               <div class="home-our-news-content">
@@ -412,7 +433,7 @@
               </div>
             </div></a>
           </div>
-          <div class="col-12 col-md-6 col-xl-6">
+          <div class="col-12 col-md-12 col-xl-6">
             <a href="./new-detail.html"><div class="crad-our-news">
               <img src="./img/home/our-news/image-2.png" class="w-100">
               <div class="home-our-news-content">
@@ -525,8 +546,8 @@
     <footer>
       <div class="qcs-footer">
         <div class="container">
-          <div class="row">
-            <div class="col-5 col-md-2 col-xl-2">
+          <div class="row justify-content-center">
+            <div class="col-5 col-md-3 col-xl-2">
               <ul class="list-unstyled qcs-footer-link">
                 <li><a href="./about-us.html">About us</a></li>
                 <li><a>Our service</a></li>
@@ -536,19 +557,19 @@
                 <li><a href="./onsite.html" class="disable">Onsite service</a></li>
               </ul>
             </div>
-            <div class="col-4 col-md-2 col-xl-2">
+            <div class="col-4 col-md-3 col-xl-2">
               <ul class="list-unstyled qcs-footer-link">
                 <li><a href="./car.html">Used Car</a></li>
                 <li><a href="./promotion.html">Promotion</a></li>
               </ul>
             </div>
-            <div class="col-3 col-md-2 col-xl-3">
+            <div class="col-3 col-md-3 col-xl-3">
               <ul class="list-unstyled qcs-footer-link">
                 <li><a href="./news.html">News</a></li>
                 <li><a href="./contact-us.html">Contact Us</a></li>
               </ul>
             </div>
-            <div class="col-12 col-md-6 col-xl-5">
+            <div class="col-12 col-md-8 col-xl-5">
               <div class="qcs-footer-right">
                 <form class="form-subscribe">
                   <input type="email" name="subscribe" id="subscribe" class="input-subscribe" placeholder="Enter your email">

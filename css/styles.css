@@ -261,8 +261,8 @@ header.active{
   text-transform: uppercase;
   font-family: 'PragatiNarrow-Bold';
   padding: 10px 20px;
-  border-top: 1px solid #545454;
-  border-bottom: 1px solid #545454;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
   margin-top: -1px;
 }
 #menu_user.qcs-link-menu-m {border-top:none;}
@@ -322,6 +322,7 @@ header.active{
   font-size: 14px;
   display: block;
 }
+.qcs-overlay-close img{cursor: pointer;}
 
 /* Footer */
 .qcs-footer{background-color: #FAFAFA;padding: 40px 0;}
@@ -668,12 +669,14 @@ a:hover .card-our-service{
   position: fixed;
   width: 100%;
   max-width: 563px;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 4px;
   z-index: 1061;
   padding: 25px;
+  height: 90%;
+  overflow: scroll;
 }
 .qcs-popup-header {text-align: right;}
 .btn-close-popup{border: none;background-color: transparent;}
@@ -787,7 +790,7 @@ a:hover .card-our-service{
   align-items: center;
   justify-content: space-evenly;
 }
-
+#popup_forget .qcs-popup-body{padding-bottom: 2rem;}
 
 /*##########################################
                 Responsive 
@@ -850,6 +853,7 @@ a:hover .card-our-service{
   .qcs-text-center-m{text-align: center;}
   .qcs-hide-d{display: block!important;}
   .qcs-hide-m{display: none!important;}
+  .qcs-flex-center-m{display: flex;align-items: center;justify-content: center;}
 
   /*Nav*/
   header{
@@ -863,9 +867,10 @@ a:hover .card-our-service{
   .btn-hamberger{display: block;}
   .qcs-header-book{margin-right: 0;font-size: 10px;padding: .5rem;height: 26px;}
   .qcs-header-book img{padding-left: 7px;}
+  .qcs-header .container{max-width: inherit;}
 
   /* Popup */
-  .qcs-popup-bg{padding: 16px;width: 90%;top:50%;overflow: scroll;}
+  .qcs-popup-bg{padding: 16px;width: 90%;top:50%;overflow: scroll;height: auto;}
   .qcs-popup-body{padding: 0;}
   .qcs-popup-body h2{font-size: 32px}
   .btn-google{margin: 5px 0;}
@@ -934,7 +939,109 @@ a:hover .card-our-service{
   .home-h1{font-size: 28px;}
   .qcs-popup-bg{height:90vh;overflow: scroll;}
 }
+@media (min-width: 768px) and (max-width: 1024px){
+  /* Global */
+  h1{font-size: 42px;}
+  .btn-home-more-m{display: none;}
+  .qcs-section{padding: 0 0 60px;}
 
+  /* Nav */
+  .qcs-header-box-lang{display: none;}
+  .qsc-nav{display: block;}
+  .qcs-header-box-logo img{width: 96px;height: 26px;}
+  .btn-hamberger{display: block;}
+  .qcs-header-book{margin-right: 0;font-size: 10px;padding: .5rem;height: 26px;}
+  .qcs-header-book img{padding-left: 7px;}
+  .navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+  .navbar-expand-lg .navbar-nav {-ms-flex-direction: row;flex-direction: row;}
+  .qcs-header .container{max-width: inherit;}
+  .navbar-nav .dropdown-menu{position: absolute;}
 
+  /* Popup */
+  .qcs-popup-bg{height: auto;}
+
+  /* Footer */
+  .qcs-footer-link > li{font-size: 14px;padding: 12.5px 0;}
+  .form-subscribe{padding: 0 0 32px;}
+  .qcs-footer-connect{text-align: center;}
+  .qcs-copyright > .container{justify-content: center;font-size: 14px;}
+
+  /* Menu */
+  .qcs-overlay{padding: 60px;}
+  .qcs-link-menu-m > .box-menu > span.icon{right: 60px;}
+  .qcs-link-menu-m{padding: 15px 30px;}
+  .qcs-link-menu-m-sub{padding: 10px 0;}
+  .qcs-overlay-menu .qcs-link-menu-m{display: none;}
+  .qcs-overlay-menu #menu_user.qcs-link-menu-m{display: block;}
+  #menu_user .box-menu .name{font-size: 18px;max-width: 250px;}
+  .qcs-img-personal{max-width: 58px;height: 58px;}
+
+  /* Home slide */
+  .carousel-control-prev, .carousel-control-next{display: none;}
+  .img-home-slide{height: 452px;object-fit: cover;object-position: center;}
+  .carousel-caption{width: 100%;left: 0;right: 0;bottom: 50%;padding: 0;transform: translate(0, 50%);}
+  .qcs-slide h1 {font-size: 42px;text-align: center;}
+  .qcs-slide-content{display: flex;flex-direction: column;align-items: center;padding: 0 16.666667%;text-align: center;font-size: 12px;}
+  .qcs-slide-btn{width: 94px;height: 37px;font-size: 13px;}
+  .carousel-caption > .container{justify-content: flex-end;padding-bottom: 3rem;}
+
+  /* Home Our service */
+  #home_our_service{padding: 30px 0;}
+  .img-home-our-service.tablet{object-fit: cover;object-position: center;height: 255px;}
+  a:hover .card-our-service-content{border-bottom:none;}
+  .card-our-service-content .box-text > .info{
+    display: block;    
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: -webkit-box;
+  }
+  .card-our-service-content .box-text{padding-right:0;}
+
+  /* Home Promotion */
+  #home_promotion_service{padding: 30px 0;overflow: hidden;}
+  #home_promotion_service .home-h1{padding-right: 35px;}
+  #home_promotion_service .container{
+    padding-right: 0;
+    padding-left: 35px;
+    margin-right: 0;
+    max-width: inherit;}
+  #home_promotion_service .slick-list {padding: 0px 60px 0 0 !important;}
+  .home-promotion-service-content > .box-title{padding: 20px 20px 20px 7px;margin-left: -1px;}
+  .home-promotion-service-content > .box-info{padding: 0 7px;}
+
+  /* Home News */
+  #home_our_news{padding: 30px 0;}
+  #home_our_news .home-h1{margin-bottom: 15px;}
+  .crad-our-news{display: flex;flex-direction: row-reverse;padding: 15px 0;}
+  .crad-our-news img{width: 50%!important;}
+  .home-our-news-content{width: 50%;padding-right: 15px;}
+  .home-our-news-content > .box-title{padding: 0;}
+
+  /* Home car recommend */
+  #home_car_recommend{padding: 30px 0;overflow: hidden;}
+  #home_car_recommend .home-h1{padding-right: 35px;}
+  #home_car_recommend .slick-list {padding: 0px 60px 0 0 !important;}
+  #home_car_recommend .container{
+    padding-right: 0;
+    padding-left: 35px;
+    margin-right: 0;
+    max-width: inherit;
+  }
+
+  /* About us */
+  #about_us{padding: 45px 0;}
+  .img-header-show{height: 269px;object-fit: cover;object-position: center;}
+  .about-us-content{padding: 15px 0;}
+  .about-us-row{padding: 35px 0 0;}
+  .about-us-text{padding-right: 0;}
+}
 
 

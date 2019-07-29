@@ -16,7 +16,7 @@ $(document).ready(function() {
           arrows: false,
           centerMode: true,
           centerPadding: "60px",
-          slidesToShow: 3
+          slidesToShow: 2
         }
       },
       {
@@ -48,7 +48,7 @@ $(document).ready(function() {
   });
 
   // Mobile 
-  if (window.matchMedia('(max-width: 768px)').matches) {
+  if (window.matchMedia('(max-width: 1024px)').matches) {
     
     $("#home_promotion_service_slide").slick({
       slidesToShow: 2,
@@ -56,10 +56,31 @@ $(document).ready(function() {
       dots: false,
       arrows: false,
       infinite: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 3000,
       centerMode: true,
       centerPadding: "40px",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: "60px",
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            arrows: false,
+            dots: false,
+            centerMode: true,
+            centerPadding: "40px",
+            slidesToShow: 2
+          }
+        }
+      ]
     });
   }
 });
@@ -84,7 +105,7 @@ function setProfile(name){
 }
 
 // Login & Regis
-function closePopup(){
+function closeSign(){
   $('html').removeClass('noScroll');
   $('#popup_login_regis, .form-regis, .form-login').hide();
   if (window.matchMedia('(max-width: 768px)').matches) {
@@ -92,7 +113,7 @@ function closePopup(){
   }
 }
 function openSignin(){
-  closeNav();
+  closeSign();
   $('html').addClass('noScroll');
   $('.form-regis').hide();
   $('#popup_login_regis, .form-login').show();
@@ -101,10 +122,27 @@ function openSignin(){
   }
 }
 function openSignup(){
-  closeNav();
+  closeSign();
   $('html').addClass('noScroll');
   $('.form-login').hide();
   $('#popup_login_regis, .form-regis').show();
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    $('header, section, footer').addClass('blur-filter');
+  }
+}
+
+// Forget Password
+function closeForget(){
+  $('html').removeClass('noScroll');
+  $('#popup_forget').hide();
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    $('header, section, footer').removeClass('blur-filter');
+  }
+}
+function openForget(){
+  closeSign();
+  $('html').addClass('noScroll');
+  $('#popup_forget').show();
   if (window.matchMedia('(max-width: 768px)').matches) {
     $('header, section, footer').addClass('blur-filter');
   }

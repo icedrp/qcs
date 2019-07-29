@@ -40,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/book" class="qcs-header-book">Book Service<img src="./img/icon/icon-right-2.svg"/></a>
+            <a href="./booking.html" class="qcs-header-book">Book Service<img src="./img/icon/icon-right-2.svg"/></a>
             <div class="qcs-header-box-logo"><a href="./"><img src="./img/logo.png" /></a></div>
             <div class="qcs-header-box-lang">
               <div class="qcs-header-box-sigin qcs-hide">
@@ -330,8 +330,9 @@
                             <h3>History</h3>
                             <p class="profile-text">Please do not share the password with others. For the security of your own account</p>
                             <div class="row history-table-title-row">
-                              <div class="col-4 col-md-3 col-xl-3"><p>Appointment date</p></div>
-                              <div class="col-4 col-md-6 col-xl-6"><p>Service</p></div>
+                              <div class="col-3 col-md-3 col-xl-3"><p>Date</p></div>
+                              <div class="col-3 col-md-4 col-xl-4"><p>Service</p></div>
+                              <div class="col-2 col-md-2 col-xl-2 text-center p-0-m"><p>Massage</p></div>
                               <div class="col-4 col-md-3 col-xl-3"><p>Status</p></div>
                             </div>
                             <div class="row">
@@ -340,8 +341,9 @@
                                     <div class="card">
                                       <div class="card-header" id="head_history_1">
                                         <div class="row history-table-row collapsed" data-toggle="collapse" href="#history_1" data-target="#history_1" aria-expanded="false" aria-controls="history_1" onclick="getHistoryList(1)">
-                                          <div class="col-4 col-md-3 col-xl-3">01-01-2019</div>
-                                          <div class="col-4 col-md-6 col-xl-6">Maintenance</div>
+                                          <div class="col-3 col-md-3 col-xl-3">01-01-2019</div>
+                                          <div class="col-3 col-md-4 col-xl-4">Maintenance</div>
+                                          <div class="col-2 col-md-2 col-xl-2 text-center p-0-m"><img src="./img/icon/icon-massage.svg" class="icon-massage" onclick="openChat(1)"></div>
                                           <div class="col-4 col-md-3 col-xl-3">
                                             <div class="history-status">
                                               <img src="./img/icon/icon-circle.svg" class="status-padding">
@@ -444,8 +446,9 @@
                                     <div class="card">
                                       <div class="card-header" id="head_history_2">
                                         <div class="row history-table-row collapsed" data-toggle="collapse" href="#history_2"  data-target="#history_2" aria-expanded="false" aria-controls="history_2" onclick="getHistoryList(2)">
-                                          <div class="col-4 col-md-3 col-xl-3">01-08-2019</div>
-                                          <div class="col-4 col-md-6 col-xl-6">Issue</div>
+                                          <div class="col-3 col-md-3 col-xl-3">01-08-2019</div>
+                                          <div class="col-3 col-md-4 col-xl-4">Issue</div>
+                                          <div class="col-2 col-md-2 col-xl-2 text-center p-0-m"><img src="./img/icon/icon-massage.svg" onclick="openChat(2)"></div>
                                           <div class="col-4 col-md-3 col-xl-3">
                                             <div class="history-status">
                                               <img src="./img/icon/icon-check.svg" class="status-success">
@@ -548,8 +551,9 @@
                                     <div class="card">
                                       <div class="card-header" id="head_history_3">
                                         <div class="row history-table-row collapsed" data-toggle="collapse" href="#history_3"  data-target="#history_3" aria-expanded="false" aria-controls="history_3" onclick="getHistoryList(3)">
-                                          <div class="col-4 col-md-3 col-xl-3">01-08-2019</div>
-                                          <div class="col-4 col-md-6 col-xl-6">Issue</div>
+                                          <div class="col-3 col-md-3 col-xl-3">01-08-2019</div>
+                                          <div class="col-3 col-md-4 col-xl-4">Issue</div>
+                                          <div class="col-2 col-md-2 col-xl-2 text-center p-0-m"><img src="./img/icon/icon-massage.svg" onclick="openChat(3)"></div>
                                           <div class="col-4 col-md-3 col-xl-3">
                                             <div class="history-status">
                                               <img src="./img/icon/icon-check.svg" class="status-success">
@@ -663,6 +667,7 @@
       </div>
     </section>
 
+    <!-- Popup image -->
     <div class="qcs-popup-img" id="history_view">
       <div class="qcs-popup-bg-img">
         <!-- Close -->
@@ -674,11 +679,87 @@
       </div>
     </div>
 
+    <!-- Popup chat -->
+    <div class="qcs-popup-chat" id="history_chat">
+      <!-- Close -->
+      <div class="qcs-popup-close-chat">
+        <button type="button" class="btn-close-popup-img" onclick="closeChat()"><img src="./img/icon/icon-close-w.svg"></button>
+      </div>
+      <div class="qcs-popup-bg-chat">
+        <!-- Body -->
+        <div class="qcs-popup-body-chat">
+          <!-- Header -->
+          <div class="qcs-popup-header-chat">
+            <div class="qcs-popup-header-box-left">
+              <img src="./img/icon/icon-user.svg" class="img-head-chat-service">
+            </div>
+            <div class="qcs-popup-header-box-right">
+              <div class="box-date">
+                <div class="qcs-chat-title">Appointment date</div>
+                <div class="qcs-chat-info">01-01-2019</div>
+              </div>
+              <div class="box-service">
+                <div class="qcs-chat-title">Service</div>
+                <div class="qcs-chat-info">Maintenance</div>
+              </div>
+              <div class="box-download">
+                <a target="_blank" href="#" class="btn-download-chat" download><img src="./img/icon/icon-download.svg"><span>Download</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Box Chat -->
+          <div class="qcs-popup-box-chat" id="qcs_box_chat">
+            <div class="qcs-chat-list-date">02/01/2019</div>
+            <!-- SA -->
+            <div class="qcs-chat-list-sa">
+              <img src="./img/icon/icon-user.svg" class="img-in-chat">
+              <div class="qcs-chat-sa-text">Lorem ipsum dolor sit amet, consectetur</div>
+            </div>
+            <!-- User -->
+            <div class="qcs-chat-list-user">
+              <div class="qcs-chat-user-text">Donec molestie odio at nisl suscipit</div>
+              <img src="./img/home/personal.svg" class="img-in-chat">
+            </div>
+            <!-- SA -->
+            <div class="qcs-chat-list-sa">
+              <img src="./img/icon/icon-user.svg" class="img-in-chat">
+              <div class="qcs-chat-sa-text">Nulla venenatis, enim in pellentesque sagittis, est lacus semper eros, id venenatis neque sapien facilisis enim.</div>
+            </div>
+            <!-- User -->
+            <div class="qcs-chat-list-user">
+              <div class="qcs-chat-user-text">Donec molestie odio at nisl suscipit</div>
+              <img src="./img/home/personal.svg" class="img-in-chat">
+            </div>
+            <!-- SA -->
+            <div class="qcs-chat-list-sa">
+              <img src="./img/icon/icon-user.svg" class="img-in-chat">
+              <div class="qcs-chat-sa-text">Nulla venenatis, enim in pellentesque sagittis, est lacus semper eros, id venenatis neque sapien facilisis enim.</div>
+            </div>
+            <!-- User -->
+            <div class="qcs-chat-list-user">
+              <div class="qcs-chat-user-text">Donec molestie odio at nisl suscipit</div>
+              <img src="./img/home/personal.svg" class="img-in-chat">
+            </div>
+            <!-- SA -->
+            <div class="qcs-chat-list-sa">
+              <img src="./img/icon/icon-user.svg" class="img-in-chat">
+              <div class="qcs-chat-sa-text">Nulla venenatis, enim in pellentesque sagittis, est lacus semper eros, id venenatis neque sapien facilisis enim.</div>
+            </div>
+          </div>
+          <!-- Send -->
+          <div class="qcs-popup-send-chat">
+            <input type="text" name="text_chat" id="text_chat" class="input-send-chat" placeholder="Type a amssage...">
+            <button type="button" class="qcs-button btn-send-chat">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div class="qcs-footer">
         <div class="container">
-          <div class="row">
-            <div class="col-5 col-md-2 col-xl-2">
+          <div class="row justify-content-center">
+            <div class="col-5 col-md-3 col-xl-2">
               <ul class="list-unstyled qcs-footer-link">
                 <li><a href="./about-us.html">About us</a></li>
                 <li><a>Our service</a></li>
@@ -688,19 +769,19 @@
                 <li><a href="./onsite.html" class="disable">Onsite service</a></li>
               </ul>
             </div>
-            <div class="col-4 col-md-2 col-xl-2">
+            <div class="col-4 col-md-3 col-xl-2">
               <ul class="list-unstyled qcs-footer-link">
                 <li><a href="./car.html">Used Car</a></li>
                 <li><a href="./promotion.html">Promotion</a></li>
               </ul>
             </div>
-            <div class="col-3 col-md-2 col-xl-3">
+            <div class="col-3 col-md-3 col-xl-3">
               <ul class="list-unstyled qcs-footer-link">
                 <li><a href="./news.html" class="active">News</a></li>
                 <li><a href="./contact-us.html">Contact Us</a></li>
               </ul>
             </div>
-            <div class="col-12 col-md-6 col-xl-5">
+            <div class="col-12 col-md-8 col-xl-5">
               <div class="qcs-footer-right">
                 <form class="form-subscribe">
                   <input type="email" name="subscribe" id="subscribe" class="input-subscribe" placeholder="Enter your email">
