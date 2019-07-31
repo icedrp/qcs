@@ -944,6 +944,29 @@ a:hover .card-our-service{
   h1{font-size: 42px;}
   .btn-home-more-m{display: none;}
   .qcs-section{padding: 0 0 60px;}
+  .qcs-card-h1{padding-top: 30px;}
+  .qcs-card-list{padding: 0;}
+  #news_detail_slide .slick-dots li button:before{
+    width: 15px;
+    height: 3px;
+    background-color: #000000;
+    content: "";
+    margin: 0
+  }
+  #news_detail_slide .slick-dots li{margin: 0;}
+  #news_detail_slide .slick-dotted.slick-slider{margin-bottom: 0;}
+  #news_detail_slide .slick-dots{bottom: -40px;}
+  #promotion_detail_slide .slick-dots li button:before{
+    width: 15px;
+    height: 3px;
+    background-color: #000000;
+    content: "";
+    margin: 0
+  }
+  #promotion_detail_slide .slick-dots li{margin: 0;}
+  #promotion_detail_slide .slick-dotted.slick-slider{margin-bottom: 0;}
+  #promotion_detail_slide .slick-dots{bottom: -40px;}
+  .qcs-flex-center-m{display: flex;align-items: center;justify-content: center;}
 
   /* Nav */
   .qcs-header-box-lang{display: none;}

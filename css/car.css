@@ -135,6 +135,34 @@
     .up-equipment, .up-spec{display: block;}
 }
 
+@media (min-width: 768px) and (max-width: 1024px){
+    #car_header{padding-top:30px;}
+    .car-detail-contact{padding-top:15px;}
+    #car_detail_slide_ex .slick-dots li button:before,
+    #car_detail_slide_in .slick-dots li button:before{
+        width: 15px;
+        height: 3px;
+        background-color: #000000;
+        content: "";
+        margin: 0
+    }
+    #car_detail_slide_ex .slick-dots li, #car_detail_slide_in .slick-dots li{margin: 0;}
+    #car_detail_slide_ex .slick-dotted.slick-slider, #car_detail_slide_in .slick-dotted.slick-slider{margin-bottom: 0;}
+    #car_detail_slide_ex .slick-dots, #car_detail_slide_in .slick-dots{bottom: -40px;}
+    .car-detail-info{padding: 30px 0;}
+    .qcs-button.btn-car-search{margin-top: 30px;}
+    .car-row-filter{padding: 30px 0;}
+    #page_car{padding: 30px 0 60px;}
+    .car-card-price{margin: 10px 0;}
+    .car-card-box-detail{padding-left: 0;}
+    .car-card-title > .name {
+        text-transform: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+    }
+}
 
 
 

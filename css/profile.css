@@ -76,7 +76,7 @@
 .history-list-service .box-text .title{font-size: 18px;line-height: 18px;font-family: 'PragatiNarrow-Bold';color: #707070;margin: 0;}
 .history-list-service .box-text .title.active{color: #F7B300;}
 .history-list-service .box-text .detail{font-size: 12px;color: #838383;margin: 0;}
-.history-box-gallery{position: relative;}
+.history-box-gallery{position: relative;padding-top: 16px;}
 .btn-history-next-gallery{
 	position: absolute;
     top: 50%;
@@ -164,7 +164,7 @@
     transform: translate(-50%, -50%);
     border-radius: 4px;
     z-index: 1061;
-    height: 60vh;
+    /*height: 60vh;*/
 }
 .qcs-popup-close-chat {
 	background-color: transparent;
@@ -208,10 +208,30 @@
 .img-in-chat{width: 100%;max-width: 30px;height: 30px;object-fit: cover;object-position: center;border-radius: 50%;}
 .icon-massage{cursor: pointer;}
 
+@media (min-width: 768px) and (max-width: 1024px){
+	.list-group-item.line{display: none;}
+	.list-group-item{font-size: 16px;text-align: center;padding: .5rem 0;}
+	.list-group-item.active{border-bottom: 2px solid #F7B300;}
+	.list-group{flex-direction: row;border-bottom: 1px solid #EBEBEB;margin-bottom: -1.5px;}
+	.profile-box-right{padding: 15px 0;border-left:none;}
+	.profile-box-left{padding: 20px 0;}
+	#profile_sign_out{display: none;}
+	.list-group-item.line{display: none;}
+	.profile-box-left h2{margin-bottom: 20px;text-align: center;}
+	.profile-tab-row{justify-content: center;}
+	.personal-detail-info .box-info .name{
+		text-transform: none;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 100%;
+		max-width: calc(100% - 60px);
+		overflow: hidden;
+	}
+}
 @media (min-width: 320px) and (max-width: 767px){
 	.profile-box-left{padding: 26px 0 0;}
 	.profile-box-left h2{text-align: center;font-size: 32px;}
-	.profile-box-right{padding: 15px;}
+	.profile-box-right{padding: 15px;border-left:none;}
 	#profile_sign_out{display: none;}
 	.list-group-item.line{display: none;}
 	.list-group-item{font-size: 16px;text-align: center;padding: .5rem 0;}
@@ -222,13 +242,14 @@
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		width: 100%;
+		max-width: calc(100% - 150px);
 		overflow: hidden;
 	}
 	.personal-detail-info .box-info{width: calc(100% - 115px);display: inline-grid;}
-	.personal-detail-info img{width: 85px;height: 85px;}
+	.personal-detail-info img{width: 85px;height: 85px;margin-right: 15px;}
 	.personal-detail-info{align-items: flex-start;}
-	.personal-detail{display: block;}
-	.box-btn-edit{padding-left: 115px;margin-top: -20px;}
+	.personal-detail{display: block;overflow: hidden;}
+	.box-btn-edit{padding-left: 100px;margin-top: -20px;}
 
 	/* Setting password */
 	.form-personal-save.active{justify-content: center;}
@@ -249,7 +270,7 @@
 	/* Popup chat */
 	.qcs-popup-bg-chat{width: 90%;}
 	.qcs-popup-header-chat{padding: 10px;}
-	.qcs-popup-box-chat{padding: 7.5px 10px;max-height: calc(100% - 135px);}
+	.qcs-popup-box-chat{padding: 7.5px 10px;max-height: 40vh;}
 	.qcs-popup-send-chat{padding: 10px;}
 	.btn-send-chat{max-width: 85px;}
 	.input-send-chat{margin-right: 10px;font-size: 14px;}
@@ -261,6 +282,7 @@
 	.btn-download-chat{font-size: 10px;}
 	.qcs-chat-list-sa, .qcs-chat-list-user{width: 50vw;}
 }
+
 
 
 

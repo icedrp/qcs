@@ -155,7 +155,7 @@ function historyGallery(id, list_id){
 						image: './img/profile/history-slide.png'
 					}
 				];
-	if (!window.matchMedia('(max-width: 768px)').matches) {
+	if (!window.matchMedia('(max-width: 767px)').matches) {
 		$.each(image, function(i, v){
 			$('#history_'+id+' .history-gallery').append('<img src="'+v.image+'" />');
 		});
