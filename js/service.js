@@ -46,11 +46,11 @@ $(document).ready(function() {
 
 function showServiceImg(){
 	$('.qcs-popup-service-img').show();
-	$('html').addClass('noScroll');
+	$('html, body').addClass('noScroll');
   	$('header, section, footer').addClass('blur-filter');
 }
 function closeServiceImg(){
 	$('.qcs-popup-service-img').hide();
-	$('html').removeClass('noScroll');
+	$('html, body').removeClass('noScroll');
   	$('header, section, footer').removeClass('blur-filter');
 }

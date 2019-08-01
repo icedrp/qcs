@@ -170,7 +170,7 @@ function historyGallery(id, list_id){
 	}
 }
 function openHistoryM(id, list_id){
-	$('html').addClass('noScroll');
+	$('html, body').addClass('noScroll');
   	$('header, section, footer').addClass('blur-filter');
   	$('#history_view').show();
   	$('.qcs-popup-body-img').empty();
@@ -206,19 +206,19 @@ function openHistoryM(id, list_id){
 	});
 }
 function closeHistoryM(){
-	$('html').removeClass('noScroll');
+	$('html, body').removeClass('noScroll');
   	$('header, section, footer').removeClass('blur-filter');
   	$('#history_view').hide();
 }
 
 // CHAT
 function closeChat(){
-	$('html').removeClass('noScroll');
+	$('html, body').removeClass('noScroll');
 	$('header, section, footer').removeClass('blur-filter');
   	$('#history_chat').hide();
 }
 function openChat(id){
-	$('html').addClass('noScroll');
+	$('html, body').addClass('noScroll');
 	if (window.matchMedia('(max-width: 768px)').matches) {
 		$('header, section, footer').addClass('blur-filter');
 	}

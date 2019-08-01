@@ -106,7 +106,7 @@ function setProfile(name){
 
 // Login & Regis
 function closeSign(){
-  $('html').removeClass('noScroll');
+  $('html, body').removeClass('noScroll');
   $('#popup_login_regis, .form-regis, .form-login').hide();
   if (window.matchMedia('(max-width: 768px)').matches) {
     $('header, section, footer').removeClass('blur-filter');
@@ -114,7 +114,7 @@ function closeSign(){
 }
 function openSignin(){
   closeSign();
-  $('html').addClass('noScroll');
+  $('html, body').addClass('noScroll');
   $('.form-regis').hide();
   $('#popup_login_regis, .form-login').show();
   if (window.matchMedia('(max-width: 768px)').matches) {
@@ -123,7 +123,7 @@ function openSignin(){
 }
 function openSignup(){
   closeSign();
-  $('html').addClass('noScroll');
+  $('html, body').addClass('noScroll');
   $('.form-login').hide();
   $('#popup_login_regis, .form-regis').show();
   if (window.matchMedia('(max-width: 768px)').matches) {
@@ -133,7 +133,7 @@ function openSignup(){
 
 // Forget Password
 function closeForget(){
-  $('html').removeClass('noScroll');
+  $('html, body').removeClass('noScroll');
   $('#popup_forget').hide();
   if (window.matchMedia('(max-width: 768px)').matches) {
     $('header, section, footer').removeClass('blur-filter');
@@ -141,7 +141,7 @@ function closeForget(){
 }
 function openForget(){
   closeSign();
-  $('html').addClass('noScroll');
+  $('html, body').addClass('noScroll');
   $('#popup_forget').show();
   if (window.matchMedia('(max-width: 768px)').matches) {
     $('header, section, footer').addClass('blur-filter');
@@ -151,12 +151,12 @@ function openForget(){
 
 // Nav menu mobile
 function openNav(){
-  $('html').addClass('noScroll');
+  $('html, body').addClass('noScroll');
   $('header, section, footer').addClass('blur-filter');
   $('.bg-overlay, .qcs-overlay').addClass('active');
 }
 function closeNav(){
-  $('html').removeClass('noScroll');
+  $('html, body').removeClass('noScroll');
   $('header, section, footer').removeClass('blur-filter');
   $('.bg-overlay, .qcs-overlay').removeClass('active');
 }

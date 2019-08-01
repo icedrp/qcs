@@ -16,7 +16,7 @@ function backToBooking(){
 	$('#booking').show();
 }
 function confirmBooking(){
-	$('html').addClass('noScroll');
+	$('html, body').addClass('noScroll');
 	$('header, section, footer').addClass('blur-filter');
 	$('#confirm_booking').show();
 }
