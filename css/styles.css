@@ -464,18 +464,18 @@ header.active{
   height: 1.5rem;
   line-height: 2;
 }
-.form-control{border:1px solid #D9D9D9;border-radius: 0;padding: 0 25px;height: 44px;}
+.form-control{border:1px solid #D9D9D9;border-radius: 0;padding: 0 15px;height: 44px;}
 .form-control:focus{outline: none;box-shadow: 0 0 0 0.2rem rgba(247, 179, 0,.25);border-color: #F7B300;}
 .form-control.disabled{background-color: #F7F7F7;color: #9F9F9F;cursor: not-allowed;pointer-events: none;}
-.custom-selectize{display: block;width: 100%;border:1px solid #D9D9D9;border-radius:0;padding: 0 10px;}
-.custom-selectize.disabled{height: 44px;}
-.selectize-control.custom-selectize{padding: 0;}
+.custom-selectize{display: block;width: 100%;}
+.custom-selectize.disabled{height: 44px;border:1px solid #D9D9D9;}
+/*.selectize-control.custom-selectize{padding: 0;}
 .selectize-control.single .selectize-input, .selectize-dropdown.single {
   border: 1px solid #D9D9D9;
   display: flex;
   align-items: center;
-}
-.selectize-control.single .selectize-input {background-color: #fff;height: 44px;}
+}*/
+/*.selectize-control.single .selectize-input {background-color: #fff;height: 44px;}*/
 select:disabled {color: #9F9F9F;}
 select {text-indent: 16px;-webkit-appearance: none;-webkit-border-radius: 0px;}
 .list-group-item{border: none;padding: .75rem 0;margin-bottom: 0;font-size: 18px;color: #A7A7A7;}
