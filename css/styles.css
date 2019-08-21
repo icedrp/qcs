@@ -647,6 +647,7 @@ a:hover .card-our-service{
   margin: 0
 }
 #home_car_recommend .slick-dots li{margin: 0 8px;}
+.slick-slide-p-m > a:focus{outline: none;}
 
 /* About us */
 #about_us{padding: 60px 0 120px;}
