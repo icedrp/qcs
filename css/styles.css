@@ -541,6 +541,7 @@ a:hover .card-our-service{
 }
 .home-our-service-row{padding: 5px 10px;}
 .home-our-service-p{padding: 5px;}
+.btn-home-more-m{display: none;}
 
 /* Home promotion service */
 #home_promotion_service{padding: 60px 0;}
@@ -675,7 +676,7 @@ a:hover .card-our-service{
   border-radius: 4px;
   z-index: 1061;
   padding: 25px;
-  height: 90%;
+  /*height: 90%;*/
   overflow: scroll;
 }
 .qcs-popup-header {text-align: right;}
